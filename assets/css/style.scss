@@ -1,0 +1,681 @@
+@import url(../fonts/index.css);
+
+// Fonts
+$ssp: "SourceSansPro-Regular";
+$pp: "Poppins-Regular";
+
+$ssp-bold: "SourceSansPro-Bold";
+$pp-s-bold: "Poppins-SemiBold";
+
+$pp-italic: "Poppins-Italic";
+$ssp-italic: "SourceSansPro-Italic";
+
+$ssp-s-bold: "SourceSansPro-SemiBold";
+$pp-bold: "Poppins-Bold";
+
+/* Main rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	   -moz-user-select: none;
+	-webkit-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+}
+
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form,
+label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td, article, aside, canvas,
+details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video {
+	-webkit-box-sizing: inherit;
+			box-sizing: inherit;
+}
+
+html {
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, b {
+	font-weight: 500;
+	font-family: "SourceSansPro-Bold";
+}
+
+h1 i, h2 i, h3 i, h4 i, h5 i, b i {
+	font-family: "SourceSansPro-BoldItalic";
+}
+
+:root {
+	/* important colors */
+	--primary-color: #467;
+	--secondary-color: #222;
+	/* white */
+	--white: #fff;
+	--white-1: #eee;
+	--white-2: #ddd;
+	--white-3: #ccc;
+	/* grey */
+	--grey-1: #bbb;
+	--grey-2: #aaa;
+	--grey-3: #999;
+	--grey-4: #888;
+	--grey-5: #777;
+	--grey-6: #666;
+	--grey-7: #555;
+	--grey-8: #444;
+	/* black */
+	--black-1: #333;
+	--black-2: #222;
+	--black-3: #111;
+	--black: #000;
+}
+
+svg:not(:root) {
+	display: block;
+}
+
+::-webkit-scrollbar {
+	background: var(--secondary-color);
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--grey-6);
+	border-radius: 6px;
+	border: 2px solid var(--secondary-color);
+}
+
+::-moz-selection {
+	background: #4678;
+}
+
+::selection {
+	background: #4678;
+}
+
+input[type="checkbox"] {
+	cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, p,
+span, img, image, picture,
+input::placeholder {
+	cursor: default;
+}
+
+img, image, picture {
+	pointer-events: none;
+}
+
+a, button, fieldset, input, textarea {
+	outline: none;
+}
+
+a, button {
+	cursor: pointer;
+}
+
+/* Body (background) */
+body {
+	background-image: url(../images/background.png);
+	background-repeat: repeat;
+	background-size: 40%;
+	background-color: var(--white);
+}
+
+// Filters
+$white-filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
+$primary-color-filter: invert(37%) sepia(12%) saturate(1220%) hue-rotate(156deg) brightness(88%) contrast(84%);
+
+/* Menu */
+$menu-width: 200px;
+$menu-width2: 60px;
+$menu-animation: all 450ms ease-in-out;
+
+.menu {
+	position: relative;
+	width: $menu-width2;
+	height: 100vh;
+
+	.container {
+		position: fixed;
+		height: 100%;
+		background: #f5f5f5;
+		z-index: 1;
+		width: $menu-width2;
+		transition: $menu-animation;
+		border: none;
+		border-right: 1px solid var(--white-2);
+		box-shadow: 0 0 transparent;
+
+		.top {
+			.logo {
+				width: $menu-width;
+				height: $menu-width;
+				padding: 25px;
+				overflow: hidden;
+				transform: rotate(-90deg);
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
+			}
+
+			h1 { margin: -10px 0 10px }
+
+			nav {
+				position: relative;
+				right: $menu-width2 + 10px;
+				transition: $menu-animation;
+				padding: 20px 0;
+				list-style: none;
+				width: $menu-width;
+
+				li {
+					margin: 9px 4px;
+					font-family: "Poppins-Regular";
+
+					a {
+						margin: 0 5px;
+						padding: 5px 8px;
+						color: var(--black-1);
+						text-decoration: none;
+						transition: $menu-animation;
+						border-radius: 3px;
+						background: none;
+
+						img {
+							width: 26px;
+							height: 26px;
+							transition: $menu-animation;
+							filter: none;
+						}
+
+						&:hover, &:focus, &.active {
+							img {
+								filter: $white-filter;
+							}
+
+							&::before {
+								content: '';
+								display: block;
+								position: absolute;
+								right: 17px;
+								width: 26px;
+								height: 26px;
+								background: var(--primary-color);
+								z-index: -1;
+								transition: $menu-animation;
+								border-radius: 2px;
+								opacity: 1;
+								transform: scale(1.3) translateX(-.5px);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.auth-actions {
+			font-family: $pp;
+			margin: 10px;
+			min-width: $menu-width - 50px;
+
+			li {
+				list-style: none;
+				text-align: right;
+				margin: 4px 0;
+				position: relative;
+				right: 50px;
+				transition: $menu-animation;
+
+				a {
+					text-decoration: underline transparent;
+					color: inherit;
+					transition: all .3s;
+
+					&:focus, &:hover {
+						text-decoration: underline var(--black);
+					}
+				}
+			}
+		}
+
+		.top .logo, .top h1, .auth-actions {
+			position: relative;
+			right: calc(($menu-width + $menu-width2) / 2);
+			transition: $menu-animation;
+		}
+
+		.carret {
+			position: absolute;
+			top: 50vh;
+			left: $menu-width2;
+			transform: translateX(-8px) translateY(-.5%);
+			background: #f5f5f5;
+			z-index: 2;
+			width: 24px;
+			height: 24px;
+			border-radius: 0 12px 12px 0;
+			transition: $menu-animation;
+			border-right: 1px solid var(--white-2);
+			box-shadow: 5px 2px 5px var(--white-2);
+
+			> span {
+				padding-right: 8px;
+				transform: rotate(0);
+				transition: $menu-animation;
+				transform-origin: 15px center;
+
+				img {
+					position: relative;
+					top: 4px;
+					left: 13px;
+					width: 20px;
+					filter: $primary-color-filter;
+				}
+			}
+
+			&::before {
+				content: '';
+				display: block;
+				width: 8px;
+				height: 30px;
+				background: #f5f5f5;
+				position: absolute;
+				left: -1px;
+			}
+		}
+
+		&:hover, &.active {
+			width: $menu-width;
+			box-shadow: 0 2px 15px var(--white-2);
+
+			.top .logo, .top h1, .auth-actions,
+			.top nav, .auth-actions li {
+				right: 0;
+			}
+
+			.top .logo {transform: rotate(0)}
+
+			.top nav li a {
+				background: transparent;
+
+				&:hover, &:focus, &.active {
+					background: var(--primary-color);
+					color: var(--white);
+				}
+
+				&::before { opacity: 0 }
+			}
+
+			.carret {
+				left: $menu-width;
+				> span { transform: rotate(.5turn) }
+			}
+
+			~ .page-content {
+				width: calc(100vw - $menu-width - 12px);
+			}
+		}
+	}
+
+	.fix {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* Main content */
+.page-content {
+	position: relative;
+	width: calc(100vw - $menu-width2 - 12px);
+	height: 100%;
+	transition: $menu-animation;
+	background: #fffb;
+
+	header, main, footer {
+		position: relative;
+		width: 100%;
+	}
+
+	header, footer {
+		box-shadow: 0 3px 10px #dadada,
+					0 8px 20px #d5d5d5;
+		background: #f5f5f5;
+	}
+
+	/* Header */
+	header {
+		height: 80px;
+		justify-content: right;
+
+		.title {
+			color: var(--primary-color);
+			font-size: 2.8rem;
+			font-family: $pp-bold;
+			position: absolute;
+			right: 50vw;
+			transform: translateX(50%);
+		}
+
+		.search {
+			position: relative;
+			visibility: visible;
+			height: 80%;
+			margin-right: 1em;
+			top: .8em;
+
+			.search-box {
+				width: 220px;
+				height: 40px;
+				padding: 0 5px 0 7px;
+				z-index: 2;
+
+				input {
+					border: none;
+					background: none;
+					color: var(--black);
+					font-family: $ssp;
+					width: calc(100% - 2.8em);
+					padding-right: 5px;
+
+					&::placeholder {color: var(--grey-6)}
+				}
+
+				.icon button {
+					position: relative;
+					width: 30px;
+					height: 30px;
+					border-radius: 50%;
+					background: var(--primary-color);
+					opacity: 1;
+					transition: all .3s ease;
+					border: none;
+
+					img {
+						position: relative;
+						top: 1px;
+						left: 1px;
+						width: 18px;
+						height: 18px;
+						filter: $white-filter;
+					}
+
+					&:hover, &:target, &:focus {
+						opacity: .9;
+					}
+				}
+
+				&::before, &::after {
+					content: '';
+					position: absolute;
+					display: none;
+					visibility: hidden;
+				}
+
+				&::before {
+					height: 1px;
+					width: calc(100% - 30px);
+					bottom: 20px;
+					left: 15px;
+					background: linear-gradient(90deg, var(--grey-1) 0%, var(--grey-4) 50%, var(--grey-1) 100%);
+				}
+
+				&::after {
+					display: block;
+					visibility: visible;
+					width: 216px;
+					height: 37px;
+					top: 2px;
+					left: 2px;
+					background: var(--white);
+					z-index: -1;
+					border-radius: 19px;
+				}
+			}
+
+			.result {
+				position: absolute;
+				background: var(--white);
+				animation: height-anim-1 1s reverse;
+				height: 40px;
+				max-height: 340px;
+				width: 100%;
+				border: 1px solid var(--grey-3);
+				border-radius: 20px;
+				z-index: 1;
+				overflow-y: scroll;
+
+				.clearfix {
+					display: block;
+					height: 40px;
+				}
+
+				.result-box {
+					padding: 6px 0;
+					animation: height-anim-2 1s reverse;
+					height: 0;
+					width: auto;
+					max-height: 250px;
+					// overflow-y: scroll;
+
+					.card-element {
+						text-decoration: none;
+						appearance: none;
+						width: 100%;
+						padding: 5px 10px;
+						font-family: $ssp;
+						transition: all 250ms;
+						background: transparent;
+						transform: none;
+
+						.card-image {
+							min-width: 30px;
+							max-width: 35px;
+							height: 50px;
+							overflow: hidden;
+
+							img {
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+							}
+						}
+
+						.card-text {
+							pointer-events: none;
+							margin-left: 5px;
+							font-size: .8rem;
+							color: var(--black);
+							line-height: .8rem;
+
+							p {
+								padding-top: 4px;
+								color: var(--grey-8);
+							}
+						}
+
+						&:hover {
+							background: var(--white-2);
+							transform: scale(103%);
+						}
+					}
+				}
+
+				&::-webkit-scrollbar { display: none }
+			}
+
+			&.active {
+				.search-box input {margin: 0}
+				.result {border: 2px solid var(--primary-color)}
+
+				&.content {
+					.search-box {
+						&::before {
+							display: block;
+							visibility: visible;
+						}
+
+						&::after {height: 41px}
+					}
+
+					.result {
+						display: block;
+						animation: height-anim-1 1s;
+						height: auto;
+
+						.result-box {
+							overflow-y: visible;
+							animation: height-anim-2 1s;
+							height: auto;
+						}
+					}
+				}
+			}
+
+			@keyframes height-anim-1 {
+				from { height: 40px; }
+				to { height: auto; }
+			}
+			
+			@keyframes height-anim-2 {
+				from { height: 0; }
+				to { height: auto; }
+			}
+		}
+	}
+
+	/* Main */
+	main {
+		height: 600px;
+		border-left: 1px solid var(--white-1);
+		box-shadow: inset 0 2px 15px var(--white-2);
+	}
+
+	/* Footer */
+    footer {
+        width: 100%;
+        background: var(--black-1);
+        box-shadow: 0 -2px 20px 20px #22221e30;
+        
+        > div {
+            height: 100%;
+    
+            &.container {
+                padding: 20px 10px;
+                flex-wrap: wrap;
+                
+                section {
+                    padding: 10px 20px 40px;
+                    min-width: 250px;
+    
+                    h3 {
+                        font-family: "Poppins-Regular";
+                        text-align: center;
+                        margin-bottom: 20px;
+                        font-weight: 500;
+                        color: var(--white);
+    
+                        &::after {
+                            content: '';
+                            display: block;
+                            width: 50px;
+                            margin: 10px 100px;
+                            height: 3px;
+                            background: var(--primary-color);
+                            transition: all 350ms;
+                        }
+                    }
+    
+                    .content {
+                        list-style: none;
+                        padding-left: 5px;
+    
+                        li {
+                            font-family: "SourceSansPro-Light";
+                            margin: 3px 0;
+                            color: var(--white-1);
+                            cursor: default;
+                            user-select: none;
+    
+                            a {
+                                position: relative;
+                                width: fit-content;
+                                font-size: 1.1rem;
+                                text-decoration: none;
+                                color: unset;
+                                cursor: pointer;
+                                
+                                &::after {
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 1px;
+                                    background: #fff0;
+                                    transition: all .4s;
+                                    left: 0;
+                                }
+    
+                                &:hover::after {
+                                    background: var(--white-1);
+                                }
+                            }
+                        }
+                    }
+    
+                    &:hover h3::after {
+                        margin: 10px 35px;
+                        width: 180px;
+                        border-radius: 2px;
+                    }
+                }
+    
+                .border {
+                    height: 8em;
+                    width: 1px;
+                    background: var(--white);
+                    opacity: .3;
+                }
+            }
+    
+            &.copyright {
+                text-align: center;
+                color: var(--white);
+				line-height: 1.2rem;
+				padding: 10px 20px;
+				font-family: "Poppins-Light";
+            }
+        }
+
+        @media screen and (max-width: 964px) {
+            .container .border {
+                display: none !important;
+            }
+        }
+    }
+}
