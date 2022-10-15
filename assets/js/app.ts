@@ -1,4 +1,6 @@
 if (typeof window !== 'undefined' && window instanceof Window) {
+    setTimeout(() => document.body.classList.add('loaded'), 1000);
+
     window.addEventListener('load', function () {
         var header: HTMLElement | null;
 

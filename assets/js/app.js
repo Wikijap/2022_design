@@ -1,4 +1,5 @@
 if (typeof window !== 'undefined' && window instanceof Window) {
+    setTimeout(function () { return document.body.classList.add('loaded'); }, 1000);
     window.addEventListener('load', function () {
         var header;
         if (header = this.document.querySelector('header')) {
