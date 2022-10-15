@@ -144,7 +144,7 @@ body {
 
 	// Filters
 	$white-filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
-	$primary-color-filter: invert(37%) sepia(12%) saturate(1220%) hue-rotate(156deg) brightness(88%) contrast(84%);
+	$primary-color-filter: invert(39%) sepia(8%) saturate(2096%) hue-rotate(156deg) brightness(88%) contrast(83%);
 
 	/* Menu */
 	$menu-width: 200px;
@@ -392,7 +392,7 @@ body {
 					width: 220px;
 					height: 40px;
 					padding: 0 5px 0 7px;
-					z-index: 2;
+					z-index: 11;
 
 					input {
 						border: none;
@@ -439,7 +439,7 @@ body {
 					&::before {
 						height: 1px;
 						width: calc(100% - 30px);
-						bottom: 20px;
+						bottom: 22px;
 						left: 15px;
 						background: linear-gradient(90deg, var(--grey-1) 0%, var(--grey-4) 50%, var(--grey-1) 100%);
 					}
@@ -466,7 +466,7 @@ body {
 					width: 100%;
 					border: 1px solid var(--grey-3);
 					border-radius: 20px;
-					z-index: 1;
+					z-index: 10;
 					overflow-y: scroll;
 
 					.clearfix {
@@ -579,7 +579,6 @@ body {
 		footer {
 			width: 100%;
 			background: var(--black-1);
-			box-shadow: 0 -2px 20px 20px #22221e30;
 			
 			> div {
 				height: 100%;
