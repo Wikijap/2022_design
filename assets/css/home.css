@@ -1,3 +1,7 @@
+main {
+  min-height: 600px;
+  height: auto !important;
+}
 main section h3 {
   font-family: "Poppins-SemiBold";
   color: var(--black-2);
@@ -6,7 +10,7 @@ main section h3 {
   text-decoration: underline;
 }
 main section.categories {
-  height: 250px;
+  min-height: 250px;
 }
 main section.categories .cards {
   gap: 0.5em;
@@ -21,6 +25,7 @@ main section.categories .cards .card {
   cursor: pointer;
   position: relative;
   padding: 5px;
+  margin: 0.5em 0;
 }
 main section.categories .cards .card .front {
   position: relative;
@@ -50,14 +55,14 @@ main section.categories .cards .card .front .text {
 }
 main section.categories .cards .card .background {
   position: absolute;
-  width: calc(100% - 5px);
-  height: calc(100% - 15px);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
   opacity: 0;
   z-index: 0;
   top: 0;
   left: 0;
   transition: all 0.4s ease;
-  padding: 9px 6px;
+  padding: 5px;
 }
 main section.categories .cards .card .background img {
   width: 100%;
@@ -94,4 +99,202 @@ main section.categories .cards .card:hover .background {
 }
 main section.categories .cards .card:hover .carret img {
   filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
+}
+main section.gallery {
+  margin-top: 1em;
+  padding: 1em;
+}
+main section.gallery .caroussel {
+  width: 100%;
+  min-height: 300px;
+  height: 60vh;
+}
+main section.gallery .caroussel .container {
+  min-width: 500px;
+  min-height: 300px;
+  height: 100%;
+  width: 120vh;
+  position: relative;
+  overflow: hidden;
+  border: 5px solid var(--white);
+  border-radius: 3px;
+  outline: 1px solid var(--white-2);
+  box-shadow: 3px -3px 0.7em 3px rgba(185, 185, 185, 0.1882352941), 5px -5px 0.5em 5px rgba(204, 204, 204, 0.1333333333);
+}
+main section.gallery .caroussel .container .carret {
+  position: absolute;
+  background: transparent;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  z-index: 2;
+  outline: none;
+  border: none;
+  transform: none;
+  transition: all 0.2s ease;
+}
+main section.gallery .caroussel .container .carret img {
+  position: relative;
+  width: 200%;
+  left: calc(100% - 0.5em);
+  -o-object-fit: contain;
+     object-fit: contain;
+  pointer-events: none;
+  filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
+}
+main section.gallery .caroussel .container .carret.left {
+  left: 0;
+}
+main section.gallery .caroussel .container .carret.left img {
+  transform: scale(1.5) rotate(0.5turn) translate(33.33%, 4px);
+}
+main section.gallery .caroussel .container .carret.right {
+  right: 0;
+}
+main section.gallery .caroussel .container .carret.right img {
+  transform: scale(1.5) translateY(4px);
+}
+main section.gallery .caroussel .container .carret:hover {
+  transform: scale(107%);
+}
+main section.gallery .caroussel .container .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #fff;
+  overflow: hidden;
+  scroll-behavior: auto;
+}
+main section.gallery .caroussel .container .content article {
+  position: relative;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+main section.gallery .caroussel .container .content article > div {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+main section.gallery .caroussel .container .content article > div.brand {
+  background: transparent;
+  color: var(--white);
+  z-index: 2;
+  padding-left: 4em;
+}
+main section.gallery .caroussel .container .content article > div.brand h2 {
+  opacity: 0;
+  margin-top: 2em;
+  font-family: "Poppins-Bold";
+}
+main section.gallery .caroussel .container .content article > div.brand p {
+  opacity: 0;
+  margin: 2em 2em 0 0;
+  font-family: "Poppins-Light";
+}
+main section.gallery .caroussel .container .content article > div.brand button {
+  position: absolute;
+  bottom: 3em;
+  border: none;
+  width: 100px;
+  height: 34px;
+  font-family: "Poppins-Regular";
+  opacity: 0;
+  background: none;
+}
+main section.gallery .caroussel .container .content article > div.brand button span {
+  width: 100px;
+  height: 34px;
+  border-radius: 17px;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  background: var(--white-1);
+  color: var(--primary-color);
+  border: 3px solid var(--white);
+}
+main section.gallery .caroussel .container .content article > div.brand button:focus span, main section.gallery .caroussel .container .content article > div.brand button:hover span, main section.gallery .caroussel .container .content article > div.brand button:target span {
+  background: var(--primary-color);
+  color: var(--white-1);
+}
+main section.gallery .caroussel .container .content article > div.brand::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: var(--primary-color);
+  width: 150%;
+  height: 150%;
+  top: -25%;
+  left: calc(-50% + 50px);
+  transform: rotate(10deg);
+  z-index: -1;
+}
+main section.gallery .caroussel .container .content article > div.post {
+  z-index: 1;
+  background: var(--black-1);
+}
+main section.gallery .caroussel .container .content article > div.post .background {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 45%;
+}
+main section.gallery .caroussel .container .content article > div.post .background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section.gallery .caroussel .container .content article > div.post .details {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 1em;
+  color: var(--white-1);
+  text-align: right;
+  opacity: 0;
+}
+main section.gallery .caroussel .container .content article > div.post .details .author {
+  font-family: "SourceSansPro-SemiBold";
+}
+main section.gallery .caroussel .container .content article > div.post .details .description {
+  font-size: 0.9rem;
+}
+main section.gallery .caroussel .container .content article > div.post .details .description .title {
+  font-family: "Poppins-Light";
+}
+main section.gallery .caroussel .container .content article > div.post .details .description .date {
+  font-family: "SourceSansPro-Regular";
+}
+main section.gallery .caroussel .container .content article.animate .brand h2, main section.gallery .caroussel .container .content article.animate .brand p, main section.gallery .caroussel .container .content article.animate .brand button,
+main section.gallery .caroussel .container .content article.animate .post .background img, main section.gallery .caroussel .container .content article.animate .post .details {
+  transition: opacity 350ms ease-out;
+  opacity: 1;
+}
+main section.gallery .caroussel .container .content article.animate .brand p {
+  transition-delay: 175ms;
+}
+main section.gallery .caroussel .container .content article.animate .brand button, main section.gallery .caroussel .container .content article.animate .post .details {
+  transition-delay: 350ms;
+}
+main section.gallery .caroussel .index {
+  position: absolute;
+  height: 20px;
+  min-width: 80px;
+  padding: 1px 5px;
+  bottom: 0;
+  transform: translateY(calc(-100% - 3px));
+  gap: 5px;
+  z-index: 2;
+}
+main section.gallery .caroussel .index > span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--grey-2);
+}
+main section.gallery .caroussel .index > span.current {
+  background: var(--white);
 }/*# sourceMappingURL=home.css.map */

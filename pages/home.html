@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../assets/css/home.css">
 
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/home.js"></script>
 
 </head>
 <body class="d-flex row">
@@ -25,9 +26,9 @@
                 <div class="logo">
                     <img src="../assets/images/logo.png" alt="Wikijap">
                 </div>
-    
+
                 <h1>Wikijap</h1>
-    
+
                 <nav>
                     <li>
                         <a href="/" class="d-flex row space-between align-center active">
@@ -46,17 +47,15 @@
                     </li>
                 </nav>
             </div>
-    
+
             <ul class="auth-actions">
                 <li><a href="/">Se connecter</a></li>
                 <li><a href="/">S'inscrire</a></li>
             </ul>
-    
-            <div class="carret d-flex justify-center align-center">
-                <span>
-                    <img src="../assets/images/carret.svg" alt="Display menu">
-                </span>
-            </div>
+
+            <!-- <div class="carret d-flex justify-center align-center">
+                <span><img src="../assets/images/carret.svg" alt="Display menu"></span>
+            </div> -->
         </div>
 
         <div class="fix"></div>
@@ -131,16 +130,16 @@
         
                             <div class="text">Mangas</div>
                         </div>
-    
+
                         <div class="background">
-                            <img src="../assets/images/naruto.jpg" alt="bg">
+                            <img src="../assets/images/books-bg.jpeg" alt="bg">
                         </div>
-    
+
                         <div class="carret">
                             <img src="../assets/images/carret.svg" alt="Next">
                         </div>
                     </div>
-    
+
                     <div class="card">
                         <div class="front d-flex column justify-center align-center">
                             <div class="icon">
@@ -149,16 +148,16 @@
         
                             <div class="text">Animés</div>
                         </div>
-    
+
                         <div class="background">
-                            <img src="../assets/images/naruto.jpg" alt="bg">
+                            <!-- <img src="../assets/images/" alt="bg"> -->
                         </div>
-    
+
                         <div class="carret">
                             <img src="../assets/images/carret.svg" alt="Next">
                         </div>
                     </div>
-    
+
                     <div class="card">
                         <div class="front d-flex column justify-center align-center">
                             <div class="icon">
@@ -167,16 +166,16 @@
         
                             <div class="text">Musiques et chansons</div>
                         </div>
-    
+
                         <div class="background">
-                            <img src="../assets/images/naruto.jpg" alt="bg">
+                            <!-- <img src="../assets/images/" alt="bg"> -->
                         </div>
-    
+
                         <div class="carret">
                             <img src="../assets/images/carret.svg" alt="Next">
                         </div>
                     </div>
-    
+
                     <div class="card">
                         <div class="front d-flex column justify-center align-center">
                             <div class="icon">
@@ -185,11 +184,11 @@
         
                             <div class="text">Actualités</div>
                         </div>
-    
+
                         <div class="background">
-                            <img src="../assets/images/naruto.jpg" alt="bg">
+                            <!-- <img src="../assets/images/" alt="bg"> -->
                         </div>
-    
+
                         <div class="carret">
                             <img src="../assets/images/carret.svg" alt="Next">
                         </div>
@@ -197,7 +196,134 @@
                 </div>
             </section>
 
-            <!-- <section></section> -->
+            <section class="gallery">
+                <h3>Derniers posts communautaires :</h3>
+
+                <div class="caroussel d-flex column align-center">
+                    <div class="container d-flex justify-center align-center">
+                        <button class="carret left d-flex column justify-center align-center">
+                            <img src="../assets/images/carret.svg" alt="Left">
+                        </button>
+
+                        <div class="content d-flex">
+                            <article class="d-flex align-center animate">
+                                <div class="brand">
+                                    <h2>Un nouveau titre</h2>
+
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sed earum expedita incidunt voluptate fugit vel, numquam consequatur repudiandae, repellendus unde harum sunt commodi optio?</p>
+
+                                    <button type="button" class="d-block">
+                                        <span class="d-flex column justify-center">Aller voir</span>
+                                    </button>
+                                </div>
+
+                                <div class="post">
+                                    <div class="background">
+                                        <img src="../assets/images/books-bg.jpeg" alt="">
+                                    </div>
+
+                                    <div class="details">
+                                        <h4 class="author">TheRedMine</h4>
+                                        <p class="description">
+                                            <span class="title">New title</span>
+                                            <span class="date">16/10/2022</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex align-center">
+                                <div class="brand">
+                                    <h2>Un deuxième titre</h2>
+
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sed earum expedita incidunt voluptate fugit vel, numquam consequatur repudiandae, repellendus unde harum sunt commodi optio?</p>
+
+                                    <button type="button" class="d-block">
+                                        <span class="d-flex column justify-center">Aller voir</span>
+                                    </button>
+                                </div>
+
+                                <div class="post">
+                                    <div class="background">
+                                        <img src="../assets/images/books-bg.jpeg" alt="">
+                                    </div>
+
+                                    <div class="details">
+                                        <h4 class="author">TheRedMine</h4>
+                                        <p class="description">
+                                            <span class="title">New title</span>
+                                            <span class="date">16/10/2022</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex align-center">
+                                <div class="brand">
+                                    <h2>Un troisième titre</h2>
+
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sed earum expedita incidunt voluptate fugit vel, numquam consequatur repudiandae, repellendus unde harum sunt commodi optio?</p>
+
+                                    <button type="button" class="d-block">
+                                        <span class="d-flex column justify-center">Aller voir</span>
+                                    </button>
+                                </div>
+
+                                <div class="post">
+                                    <div class="background">
+                                        <img src="../assets/images/books-bg.jpeg" alt="">
+                                    </div>
+
+                                    <div class="details">
+                                        <h4 class="author">TheRedMine</h4>
+                                        <p class="description">
+                                            <span class="title">New title</span>
+                                            <span class="date">16/10/2022</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="d-flex align-center">
+                                <div class="brand">
+                                    <h2>Un quatrième titre</h2>
+
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sed earum expedita incidunt voluptate fugit vel, numquam consequatur repudiandae, repellendus unde harum sunt commodi optio?</p>
+
+                                    <button type="button" class="d-block">
+                                        <span class="d-flex column justify-center">Aller voir</span>
+                                    </button>
+                                </div>
+
+                                <div class="post">
+                                    <div class="background">
+                                        <img src="../assets/images/books-bg.jpeg" alt="">
+                                    </div>
+
+                                    <div class="details">
+                                        <h4 class="author">TheRedMine</h4>
+                                        <p class="description">
+                                            <span class="title">New title</span>
+                                            <span class="date">16/10/2022</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <button class="carret right d-flex column justify-center align-center">
+                            <img src="../assets/images/carret.svg" alt="Right">
+                        </button>
+                    </div>
+
+                    <div class="index d-flex justify-center align-center">
+                        <span class="current"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer class="d-flex column">

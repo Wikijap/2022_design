@@ -3,6 +3,9 @@ $white-filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness
 $primary-color-filter: invert(39%) sepia(8%) saturate(2096%) hue-rotate(156deg) brightness(88%) contrast(83%);
 
 main {
+    min-height: 600px;
+    height: auto !important;
+
     section {
         h3 {
             font-family: "Poppins-SemiBold";
@@ -13,7 +16,7 @@ main {
         }
 
         &.categories {
-            height: 250px;
+            min-height: 250px;
 
             .cards {
                 gap: .5em;
@@ -29,6 +32,7 @@ main {
                     cursor: pointer;
                     position: relative;
                     padding: 5px;
+                    margin: .5em 0;
 
                     .front {
                         position: relative;
@@ -61,14 +65,14 @@ main {
 
                     .background {
                         position: absolute;
-                        width: calc(100% - 5px);
-                        height: calc(100% - 15px);
+                        width: calc(100% - 10px);
+                        height: calc(100% - 10px);
                         opacity: 0;
                         z-index: 0;
                         top: 0;
                         left: 0;
                         transition: all .4s ease;
-                        padding: 9px 6px;
+                        padding: 5px;
 
                         img {
                             width: 100%;
@@ -104,6 +108,224 @@ main {
 
                         .background { opacity: .5 }
                         .carret img { filter: $white-filter }
+                    }
+                }
+            }
+        }
+
+        &.gallery {
+            margin-top: 1em;
+            padding: 1em;
+
+            .caroussel {
+                width: 100%;
+                min-height: 300px;
+                height: 60vh;
+
+                .container {
+                    min-width: 500px;
+                    min-height: 300px;
+                    height: 100%;
+                    width: calc(60vh * 2);
+                    position: relative;
+                    overflow: hidden;
+                    border: 5px solid var(--white);
+                    border-radius: 3px;
+                    outline: 1px solid var(--white-2);
+                    box-shadow: 3px -3px .7em 3px #b9b9b930,
+                                5px -5px .5em 5px #ccc2;
+
+                    .carret {
+                        position: absolute;
+                        background: transparent;
+                        height: 100%;
+                        width: 30px;
+                        cursor: pointer;
+                        z-index: 2;
+                        outline: none;
+                        border: none;
+                        transform: none;
+                        transition: all .2s ease;
+
+                        img {
+                            position: relative;
+                            width: 200%;
+                            left: calc(100% - .5em);
+                            object-fit: contain;
+                            pointer-events: none;
+                            filter: $white-filter;
+                        }
+
+                        &.left {
+                            left: 0;
+                            img {transform: scale(1.5) rotate(.5turn) translate(33.33%, 4px)}
+                        }
+
+                        &.right {
+                            right: 0;
+                            img {transform: scale(1.5) translateY(4px)}
+                        }
+
+                        &:hover {transform: scale(107%)}
+                    }
+
+                    .content {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                        background: #fff;
+                        overflow: hidden;
+                        scroll-behavior: auto;
+
+                        article {
+                            position: relative;
+                            min-width: 100%;
+                            width: 100%;
+                            height: 100%;
+                            overflow: hidden;
+
+                            > div {
+                                position: relative;
+                                width: 50%;
+                                height: 100%;
+
+                                &.brand {
+                                    background: transparent;
+                                    color: var(--white);
+                                    z-index: 2;
+                                    padding-left: 4em;
+
+                                    h2 {
+                                        opacity: 0;
+                                        margin-top: 2em;
+                                        font-family: "Poppins-Bold";
+                                    }
+                                    
+                                    p {
+                                        opacity: 0;
+                                        margin: 2em 2em 0 0;
+                                        font-family: "Poppins-Light";
+                                    }
+
+                                    button {
+                                        position: absolute;
+                                        bottom: 3em;
+                                        border: none;
+                                        width: 100px;
+                                        height: 34px;
+                                        font-family: "Poppins-Regular";
+                                        opacity: 0;
+                                        background: none;
+
+                                        span {
+                                            width: 100px;
+                                            height: 34px;
+                                            border-radius: 17px;
+                                            pointer-events: none;
+                                            transition: all .4s ease;
+                                            background: var(--white-1);
+                                            color: var(--primary-color);
+                                            border: 3px solid var(--white);
+                                        }
+
+                                        &:focus, &:hover, &:target {
+                                            span {
+                                                background: var(--primary-color);
+                                                color: var(--white-1);
+                                            }
+                                        }
+                                    }
+
+                                    &::before {
+                                        content: '';
+                                        display: block;
+                                        position: absolute;
+                                        background: var(--primary-color);
+                                        width: 150%;
+                                        height: 150%;
+                                        top: -25%;
+                                        left: calc(-50% + 50px);
+                                        transform: rotate(10deg);
+                                        z-index: -1;
+                                    }
+                                }
+
+                                &.post {
+                                    z-index: 1;
+                                    background: var(--black-1);
+
+                                    .background {
+                                        position: absolute;
+                                        right: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        opacity: 45%;
+
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }
+                                    }
+        
+                                    .details {
+                                        position: absolute;
+                                        right: 0;
+                                        bottom: 0;
+                                        padding: 1em;
+                                        color: var(--white-1);
+                                        text-align: right;
+                                        opacity: 0;
+
+                                        .author { font-family: "SourceSansPro-SemiBold" }
+
+                                        .description {
+                                            font-size: .9rem;
+
+                                            .title { font-family: "Poppins-Light" }
+                                            .date { font-family: "SourceSansPro-Regular" }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.animate {
+                                $caroussel-inner-animation: 350ms;
+
+                                .brand h2, .brand p, .brand button,
+                                .post .background img, .post .details {
+                                    transition: opacity $caroussel-inner-animation ease-out;
+                                    opacity: 1;
+                                }
+
+                                .brand p { transition-delay: $caroussel-inner-animation * .5 }
+
+                                .brand button, .post .details {
+                                    transition-delay: $caroussel-inner-animation;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .index {
+                    position: absolute;
+                    height: 20px;
+                    min-width: 80px;
+                    padding: 1px 5px;
+                    bottom: 0;
+                    transform: translateY(calc(-100% - 3px));
+                    gap: 5px;
+                    z-index: 2;
+
+                    > span {
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        background: var(--grey-2);
+
+                        &.current { background: var(--white) }
                     }
                 }
             }
