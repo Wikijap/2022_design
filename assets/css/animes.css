@@ -212,4 +212,45 @@ main .container .content .card[data-new=true]:hover .img::after {
   border-top-color: var(--white-3);
   background: var(--white);
   color: var(--primary-color);
+}
+main .container .loading-animation {
+  margin: 1em 0;
+  padding: 1em 0;
+  display: none;
+}
+main .container .loading-animation .loader {
+  position: relative;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+}
+main .container .loading-animation .loader img {
+  position: relative;
+  width: 100%;
+  filter: brightness(15%);
+}
+main .container .loading-animation .loader img:nth-child(1) {
+  top: 2em;
+  -webkit-animation: turn-animation 0.8s linear infinite;
+          animation: turn-animation 0.8s linear infinite;
+}
+main .container .loading-animation .loader img:nth-child(2) {
+  top: -2em;
+  -webkit-animation: turn-animation 0.8s cubic-bezier(0.445, 0.1, 0.55, 0.9) 100ms infinite;
+          animation: turn-animation 0.8s cubic-bezier(0.445, 0.1, 0.55, 0.9) 100ms infinite;
+}
+main .container .loading-animation .loader::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
+  background: none;
+  border-radius: 50%;
+  border: 7px solid rgba(0, 0, 0, 0.1333333333);
+}
+main .container.loading .loading-animation {
+  display: initial;
 }/*# sourceMappingURL=animes.css.map */

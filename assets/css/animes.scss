@@ -231,6 +231,49 @@ main {
                 }
             }
         }
+
+        .loading-animation {
+            margin: 1em 0;
+            padding: 1em 0;
+            display: none;
+
+            .loader {
+                position: relative;
+                width: 4em;
+                height: 4em;
+                border-radius: 50%;
+
+                img {
+                    position: relative;
+                    width: 100%;
+                    filter: brightness(15%);
+
+                    &:nth-child(1) {
+                        top: 2em;
+                        animation: turn-animation .8s linear infinite;
+                    }
+            
+                    &:nth-child(2) {
+                        top: -2em;
+                        animation: turn-animation .8s cubic-bezier(0.445, 0.10, 0.55, 0.90) 100ms infinite;
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: calc(100% - 14px);
+                    height: calc(100% - 14px);
+                    background: none;
+                    border-radius: 50%;
+                    border: 7px solid #0002;
+                }
+            }
+        }
+
+        &.loading .loading-animation { display: initial }
     }
 }
-
