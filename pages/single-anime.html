@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <title>Document</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../assets/images/icon/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/sheet.css">
+    <link rel="stylesheet" href="../assets/css/single-presentation.css">
+
+    <script src="../assets/js/app.js"></script>
+
+</head>
+<body class="d-flex row loaded">
+
+    <div class="menu">
+        <div class="container d-flex column space-between">
+            <div class="top d-flex column align-center">
+                <div class="logo">
+                    <img src="../assets/images/logo.png" alt="Wikijap">
+                </div>
+
+                <h1>Wikijap</h1>
+
+                <nav>
+                    <li>
+                        <a href="/pages/home.html" class="d-flex row space-between align-center">
+                            Accueil <img src="../assets/images/home.png" alt="Accueil">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/animes.html" class="d-flex row space-between align-center">
+                            Animés <img src="../assets/images/video.png" alt="Animés">
+                        </a>
+                    </li>
+                </nav>
+            </div>
+
+            <ul class="auth-actions">
+                <li><a href="/">Se connecter</a></li>
+                <li><a href="/">S'inscrire</a></li>
+            </ul>
+
+            <!-- <div class="carret d-flex justify-center align-center">
+                <span><img src="../assets/images/carret.svg" alt="Display menu"></span>
+            </div> -->
+        </div>
+
+        <div class="fix"></div>
+    </div>
+
+    <div class="page-content">
+        <header class="d-flex align-center">
+            <h1 class="title">Wikijap</h1>
+
+            <div class="search d-flex column">
+                <div class="search-box d-flex row space-between align-center">
+                    <input type="text" name="search" id="hdr-search" placeholder="Rechercher...">
+
+                    <label class="icon" for="hdr-search">
+                        <button type="button">
+                            <img src="../assets/images/search.svg" alt="Search">
+                        </button>
+                    </label>
+                </div>
+
+                <div class="result">
+                    <div class="clearfix"></div>
+
+                    <div class="result-box">
+                        <a class="card-element d-flex align-center" href="#">
+                            <div class="card-image">
+                                <img src="../assets/images/test/naruto.jpg" alt="Image">
+                            </div>
+                            
+                            <div class="card-text">
+                                <b>Naruto</b> | <i>Manga</i>
+                                <p>Lorem ipsum, dolor sit amet consectetur</p>
+                            </div>
+                        </a>
+
+                        <a class="card-element d-flex align-center" href="#">
+                            <div class="card-image">
+                                <img src="../assets/images/test/naruto.jpg" alt="Image">
+                            </div>
+                            
+                            <div class="card-text">
+                                <b>Naruto</b> | <i>Manga</i>
+                                <p>Lorem ipsum, dolor sit amet consectetur</p>
+                            </div>
+                        </a>
+
+                        <a class="card-element d-flex align-center" href="#">
+                            <div class="card-image">
+                                <img src="../assets/images/test/naruto.jpg" alt="Image">
+                            </div>
+                            
+                            <div class="card-text">
+                                <b>Naruto</b> | <i>Manga</i>
+                                <p>Lorem ipsum, dolor sit amet consectetur</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main role="main" class="d-flex column align-center">
+            <div class="top-background">
+                <img src="../assets/images/test/classroom-of-the-elite-banner.jpg" alt="classroom-of-the-elite">
+                <img src="../assets/images/test/classroom-of-the-elite-banner.jpg" alt="classroom-of-the-elite">
+            </div>
+
+            <h2 class="title">
+                Classroom of the Elite
+            </h2>
+
+            <section class="main-informations d-flex row wrap space-between">
+                <div class="poster col-center">
+                    <img src="../assets/images/test/posters/classroom of the elite.jpg" alt="classroom-of-the-elite-poster">
+                </div>
+
+                <span></span>
+
+                <div class="container">
+                    <div class="sub-title">
+                        Infos rapides
+                    </div>
+
+                    <div class="content">
+                        <p class="d-flex space-between"><span>Titre original</span> Yōkoso Jitsuryoku Shijō Shugi no Kyōshitsu e</p>
+                        <p class="d-flex space-between"><span>Auteur</span> Kinugasa Shogo</p>
+                        <p class="d-flex space-between"><span>Thèmes</span> Ecole - Quotidien</p>
+                        <p class="d-flex space-between"><span>Genres associés</span> Comédie - Drame - Slice of Life - Seinen</p>
+                        <p class="d-flex space-between"><span>Diffusion</span> 12/07/2017 - 27/09/2017</p>
+                        <p class="d-flex space-between"><span>Format</span> 12 x 23 min</p>
+                        <p class="d-flex space-between"><span>Âge minimal recommandé</span> 14 ans</p>
+                        <p class="d-flex space-between"><span>Éditeur</span> Kadokawa Pictures Inc.</p>
+                        <p class="d-flex space-between"><span>Studio</span> Larche</p>
+                        <p class="d-flex space-between"><span>Groupe</span> <a href="/">Classroom of the Elite</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="description d-flex column">
+                <div class="controllers d-flex row space-between">
+                    <div class="buttons d-flex row space-between">
+                        <button class="seen d-flex col-center" title="Seen">
+                            <img src="../assets/images/ok.png" alt="Seen">
+                        </button>
+
+                        <button class="to-see d-flex col-center active" title="To see">
+                            <img src="../assets/images/eye.svg" alt="To see">
+                        </button>
+
+                        <button class="favourite d-flex col-center" title="Favourite">
+                            <img src="../assets/images/bookmark.png" alt="Favourite">
+                        </button>
+                    </div>
+
+                    <div class="notes d-flex align-center">
+                        <div class="own d-flex align-center">
+                            <span>Ma note</span>
+
+                            <div class="note">
+                                <img src="../assets/images/star.png" alt="1">
+                                <img src="../assets/images/star.png" alt="2">
+                                <img src="../assets/images/star.png" alt="3">
+                                <img src="../assets/images/star.png" alt="4">
+                                <img src="../assets/images/star.png" alt="5">
+                            </div>
+                        </div>
+
+                        <div class="text">
+                            <span class="rating">Note moyenne : .</span>
+                            <span class="notes-count">0</span>
+                        </div>
+                    </div>
+
+                    <div class="share">
+                        <span class="icon">...</span>
+                    </div>
+                </div>
+
+                <div class="content">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ut similique obcaecati, temporibus tenetur debitis repellat totam consequuntur harum ab. Vel vero eligendi excepturi. Consectetur earum quas enim suscipit magni.<br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab molestias cumque dolorum consequuntur accusamus qui nostrum obcaecati rerum laudantium facilis doloremque accusantium quas quibusdam pariatur, deserunt possimus corrupti sunt id!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat dolorum vero id possimus fugiat fugit ullam quod. Vel possimus fuga alias ex ullam quis obcaecati, doloremque, maiores repudiandae excepturi perferendis.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel repellat ducimus quas fugit reprehenderit accusamus, maiores illum ab molestiae esse inventore ratione. Deleniti iste aspernatur mollitia maiores harum assumenda aut.<br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quaerat aut nemo odio, praesentium earum distinctio quas provident nesciunt, molestiae eos harum consequuntur non voluptatibus dicta unde vitae quasi labore!
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium rerum, perferendis eum debitis praesentium at qui dicta eaque numquam consequatur enim mollitia est molestiae corporis doloribus harum velit. Aspernatur, sunt.
+                </div>
+            </section>
+
+            <section class="characters d-flex column">
+                <h3 class="section-title">Personnages :</h3>
+
+                <div class="content d-flex row align-center">
+                    <div class="card d-flex column space-evenly align-center">
+                        <div class="avatar col-center">
+                            <img src="../assets/images/profile.png" alt="Kiyotaka">
+                        </div>
+
+                        <div class="name">Ayanokoji Kiyotaka</div>
+
+                        <div class="animation-text d-flex column space-evenly">
+                            <span data-content="Voix">John Doe</span>
+                        </div>
+                    </div>
+
+                    <div class="card d-flex column space-evenly align-center">
+                        <div class="avatar col-center">
+                            <img src="../assets/images/profile.png" alt="Kiyotaka">
+                        </div>
+
+                        <div class="name">Ayanokoji Kiyotaka</div>
+
+                        <div class="animation-text d-flex column space-evenly">
+                            <span data-content="Voix">John Doe</span>
+                        </div>
+                    </div>
+
+                    <div class="card d-flex column space-evenly align-center">
+                        <div class="avatar col-center">
+                            <img src="../assets/images/profile.png" alt="Kiyotaka">
+                        </div>
+
+                        <div class="name">Ayanokoji Kiyotaka</div>
+
+                        <div class="animation-text d-flex column space-evenly">
+                            <span data-content="Voix">John Doe</span>
+                        </div>
+                    </div>
+
+                    <div class="card d-flex column space-evenly align-center">
+                        <div class="avatar col-center">
+                            <img src="../assets/images/profile.png" alt="Kiyotaka">
+                        </div>
+
+                        <div class="name">Ayanokoji Kiyotaka</div>
+
+                        <div class="animation-text d-flex column space-evenly">
+                            <span data-content="Voix">John Doe</span>
+                        </div>
+                    </div>
+
+                    <div class="card d-flex column space-evenly align-center">
+                        <div class="avatar col-center">
+                            <img src="../assets/images/profile.png" alt="Kiyotaka">
+                        </div>
+
+                        <div class="name">Ayanokoji Kiyotaka</div>
+
+                        <div class="animation-text d-flex column space-evenly">
+                            <span data-content="Voix">John Doe</span>
+                        </div>
+                    </div>
+
+                    <div class="card d-flex column space-evenly align-center">
+                        <div class="avatar col-center">
+                            <img src="../assets/images/profile.png" alt="Kiyotaka">
+                        </div>
+
+                        <div class="name">Ayanokoji Kiyotaka</div>
+
+                        <div class="animation-text d-flex column space-evenly">
+                            <span data-content="Voix">John Doe</span>
+                        </div>
+                    </div>
+
+                    <div class="card d-flex column space-evenly align-center">
+                        <div class="avatar col-center">
+                            <img src="../assets/images/profile.png" alt="Kiyotaka">
+                        </div>
+
+                        <div class="name">Ayanokoji Kiyotaka</div>
+
+                        <div class="animation-text d-flex column space-evenly">
+                            <span data-content="Voix">John Doe</span>
+                        </div>
+                    </div>
+
+                    <div class="card d-flex column space-evenly align-center">
+                        <div class="avatar col-center">
+                            <img src="../assets/images/profile.png" alt="Kiyotaka">
+                        </div>
+
+                        <div class="name">Ayanokoji Kiyotaka</div>
+
+                        <div class="animation-text d-flex column space-evenly">
+                            <span data-content="Voix">John Doe</span>
+                        </div>
+                    </div>
+
+                    <div class="card d-flex column space-evenly align-center">
+                        <div class="avatar col-center">
+                            <img src="../assets/images/profile.png" alt="Kiyotaka">
+                        </div>
+
+                        <div class="name">Ayanokoji Kiyotaka</div>
+
+                        <div class="animation-text d-flex column space-evenly">
+                            <span data-content="Voix">John Doe</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="episodes">
+                <h3 class="section-title">épisodes :</h3>
+
+                <table class="content">
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="d-flex row align-center">
+                                    <span>#</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="d-flex row align-center">
+                                    <span class="reverse" onclick="this.classList.toggle('reverse')">Nom de l'épisode</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="d-flex row align-center">
+                                    <span>Date</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Qu'est-ce qui est mauvais ? Tout ce qui vient de la faiblesse.</td>
+                            <td>12/07/2017</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>C'est une grande habileté que de savoir cacher son habileté.</td>
+                            <td>19/07/2017</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>L'homme est le seul animal qui marchande. Aucun chien n'échange d'os avec un autre.</td>
+                            <td>26/07/2017</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Il ne faut pas s'offenser que les autres nous cachent la vérité, puisque nous nous la cachons si souvent à nous-mêmes.</td>
+                            <td>02/08/2017</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>L'enfer, c'est les autres.</td>
+                            <td>09/08/2017</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Il y a deux sortes de mensonges, celui de fait qui regarde le passé, celui de droit qui regarde l'avenir.</td>
+                            <td>16/08/2017</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="reviews">
+                <h3 class="section-title">Avis :</h3>
+
+                <div class="content d-flex column">
+                    <div class="review d-flex row">
+                        <div class="avatar col-center">
+                            <img src="../assets/images/test/ayanokoji.jpg" alt="TheRedMine">
+                        </div>
+                        <div class="text">
+                            <h3>TheRedMine</h3>
+                            <p class="col-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ducimus deserunt, earum optio distinctio dolore esse ex a ab dicta mollitia blanditiis necessitatibus quos amet. Rem excepturi impedit officia harum?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="d-flex column">
+            <div class="container d-flex wrap space-evenly align-center">
+                <section class="d-flex column">
+                    <h3 class="title">A propos</h3>
+
+                    <ul class="content">
+                        <li><a href="/">Conditions Générales d'Utilisation</a></li>
+                        <li><a href="/">Faire un don</a></li>
+                        <li><a href="/">Données personnelles</a></li>
+                    </ul>
+                </section>
+
+                <div class="border d-block"></div>
+
+                <section class="d-flex column">
+                    <h3 class="title">Nous contacter</h3>
+
+                    <ul class="content">
+                        <li><a href="/">Signaler une anomalie</a></li>
+                        <li><a href="/">Serveur Discord</a></li>
+                        <li><a href="/">Lien Instagram</a></li>
+                    </ul>
+                </section>
+
+                <div class="border d-block"></div>
+
+                <section class="d-flex column">
+                    <h3 class="title">Liens rapides</h3>
+
+                    <ul class="content">
+                        <li><a href="/">Remerciements</a></li>
+                        <li><a href="/">Cod'ons</a></li>
+                        <li><a href="/">Cryptest</a></li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="copyright">
+                Wikijap &copy;&ensp;—&ensp;Copyright 2019 - 2024&ensp;—&ensp;Tous droits réservés
+            </div>
+        </footer>
+    </div>
+
+    <div class="loader-container d-flex column align-center justify-center">
+        <div class="page-loader d-flex column align-center justify-center">
+            <img src="../assets/images/loading-part.svg" alt="Loading">
+            <img src="../assets/images/loading-part.svg" alt="Loading">
+        </div>
+    </div>
+
+    <script>window.scrollTo({ top: document.documentElement.scrollHeight - document.documentElement.clientHeight });</script>
+
+</body>
+</html>

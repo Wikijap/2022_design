@@ -1,0 +1,429 @@
+main {
+  margin-bottom: 1em;
+  height: auto !important;
+}
+main > div, main > section {
+  position: relative;
+  width: calc(100% - 10px - 6em);
+}
+main .top-background {
+  overflow: hidden;
+  height: 400px;
+}
+main .top-background img {
+  width: 100%;
+  height: 100%;
+}
+main .top-background img:first-child {
+  position: absolute;
+  filter: opacity(0.3) blur(3px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+main .top-background img:last-child {
+  position: relative;
+  z-index: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .top-background::before, main .top-background::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+main .top-background::before {
+  background: linear-gradient(0, rgba(0, 0, 0, 0.6) 0, rgba(68, 68, 68, 0.18) 50%, transparent 100%);
+  z-index: 2;
+}
+main .top-background::after {
+  background: linear-gradient(90deg, rgba(221, 221, 221, 0.3333333333) 0, transparent 50%, rgba(221, 221, 221, 0.3333333333) 100%);
+  z-index: 3;
+}
+main .title {
+  margin: 1.5em 0;
+  text-align: center;
+  font-family: "Poppins-SemiBold";
+  color: var(--primary-color);
+  font-size: 32pt;
+}
+main > section {
+  padding: 1em;
+  background: var(--primary-color);
+  width: calc(100% - 10px - 8em);
+  margin-bottom: 2em;
+  box-shadow: 5px -5px 20px 5px rgba(102, 102, 102, 0.1333333333), 0 0 25px rgba(167, 167, 167, 0.3137254902);
+}
+main > section.main-informations {
+  min-height: calc(500px - 2em);
+}
+main > section.main-informations .poster {
+  height: calc(500px - 2em);
+  width: 300px;
+  overflow: hidden;
+}
+main > section.main-informations .poster img {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main > section.main-informations > span {
+  position: relative;
+  width: 3px;
+  height: 90%;
+  background: var(--white-1);
+  border-radius: 2px;
+  top: 5%;
+  opacity: 0.8;
+}
+@media screen and (max-width: 830px) {
+  main > section.main-informations > span {
+    display: none;
+  }
+}
+main > section.main-informations .container {
+  min-width: 300px;
+  width: calc(100% - 320px - 3em);
+  color: var(--white-1);
+  position: relative;
+}
+main > section.main-informations .container .sub-title {
+  font-family: "Poppins-SemiBold";
+  font-size: 1.3rem;
+  margin: 15px 0;
+}
+main > section.main-informations .container .content {
+  margin-top: 1.5em;
+}
+main > section.main-informations .container .content p {
+  margin: 7px 0;
+  font-family: "SourceSansPro-Regular";
+  padding: 0 1em 10px 0;
+  border: none;
+  border-bottom: 1px solid rgba(221, 221, 221, 0.3333333333);
+}
+main > section.main-informations .container .content p span {
+  font-family: "SourceSansPro-Bold";
+}
+main > section.main-informations .container .content p span::after {
+  content: " : ";
+}
+main > section.main-informations .container .content p a {
+  text-decoration: none;
+  color: inherit;
+}
+main > section.main-informations .container .content p:last-child {
+  border-bottom: none;
+}
+main > section.description {
+  color: var(--white-1);
+}
+main > section.description .controllers .buttons {
+  width: 120px;
+}
+main > section.description .controllers .buttons button {
+  width: 34px;
+  height: 34px;
+  overflow: hidden;
+  border: none;
+  background: var(--white);
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  transition: all 0.3s;
+  opacity: 1;
+}
+main > section.description .controllers .buttons button img {
+  width: 90%;
+  height: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: invert(39%) sepia(8%) saturate(2096%) hue-rotate(156deg) brightness(88%) contrast(83%);
+}
+main > section.description .controllers .buttons button.active {
+  background: transparent;
+}
+main > section.description .controllers .buttons button.active img {
+  filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
+}
+main > section.description .controllers .buttons button:hover {
+  opacity: 75%;
+}
+main > section.description .controllers .notes {
+  gap: 1em;
+}
+main > section.description .controllers .notes .own {
+  font-family: "Poppins-Light";
+}
+main > section.description .controllers .notes .own span::after {
+  content: " : ";
+}
+main > section.description .controllers .notes .own .note {
+  margin-left: 5px;
+  position: relative;
+}
+main > section.description .controllers .notes .own .note img {
+  width: 20px;
+  height: 20px;
+  filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
+  cursor: pointer;
+  pointer-events: painted;
+}
+main > section.description .controllers .notes .own .note img.hover {
+  filter: invert(79%) sepia(93%) saturate(613%) hue-rotate(327deg) brightness(102%) contrast(102%);
+}
+main > section.description .controllers .notes .text .rating {
+  font-family: "SourceSansPro-Regular";
+}
+main > section.description .controllers .notes .text .rating::after {
+  content: "/5";
+}
+main > section.description .controllers .notes .text .notes-count {
+  margin-left: 5px;
+  font-family: "SourceSansPro-Regular";
+  font-size: 0.8rem;
+}
+main > section.description .controllers .notes .text .notes-count::before, main > section.description .controllers .notes .text .notes-count::after {
+  font-family: "Poppins-Light";
+}
+main > section.description .controllers .notes .text .notes-count::before {
+  content: "(";
+}
+main > section.description .controllers .notes .text .notes-count::after {
+  content: " votes)";
+}
+main > section.description .controllers .share {
+  position: relative;
+  padding: 0 8px;
+  cursor: pointer;
+  transform-origin: 42px 12px;
+}
+main > section.description .controllers .share .icon {
+  pointer-events: none;
+  position: relative;
+  right: -1.5rem;
+  font-size: 2rem;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+}
+main > section.description .controllers .share::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: var(--white);
+  opacity: 0;
+  top: -4px;
+  right: -4px;
+  border-radius: 50%;
+  transform: scale(1.2);
+  transition: all 0.2s ease-out;
+}
+main > section.description .controllers .share:hover::before {
+  opacity: 25%;
+}
+main > section.description .content {
+  font-size: 0.95rem;
+  margin-top: 1.5em;
+  font-family: "SourceSansPro-Regular";
+}
+main > section.characters .section-title, main > section.episodes .section-title, main > section.reviews .section-title {
+  font-size: 1.1rem;
+  font-family: "Poppins-SemiBold";
+  color: var(--white);
+}
+main > section.characters .section-title::first-letter, main > section.episodes .section-title::first-letter, main > section.reviews .section-title::first-letter {
+  text-transform: uppercase;
+}
+main > section.characters .content, main > section.episodes .content, main > section.reviews .content {
+  margin-top: 0.7em;
+  padding: 6px;
+}
+main > section.characters .content::-webkit-scrollbar, main > section.episodes .content::-webkit-scrollbar, main > section.reviews .content::-webkit-scrollbar {
+  border-radius: 6px;
+}
+main > section.characters .content {
+  overflow-x: auto;
+  gap: 1em;
+}
+main > section.characters .content .card {
+  position: relative;
+  width: 150px;
+  min-width: 150px;
+  height: 210px;
+  background: var(--white-2);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s;
+  transform: none;
+}
+main > section.characters .content .card .avatar {
+  width: 95%;
+  height: calc(100% - 40px);
+}
+main > section.characters .content .card .avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main > section.characters .content .card .name {
+  text-align: center;
+  width: 100%;
+  font-family: "SourceSansPro-Light";
+}
+main > section.characters .content .card .animation-text {
+  position: absolute;
+  background: rgba(34, 34, 34, 0.6666666667);
+  width: calc(100% - 0.5em - 14px);
+  height: calc(100% - 0.5em);
+  color: var(--white);
+  font-family: "Poppins-Light";
+  padding: 0 7px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+main > section.characters .content .card .animation-text > span::before {
+  content: attr(data-content) " : ";
+  font-family: "Poppins-SemiBold";
+}
+main > section.characters .content .card:hover {
+  transform: scale(102%);
+}
+main > section.characters .content .card:hover .animation-text {
+  opacity: 1;
+}
+main > section.characters .content::-webkit-scrollbar {
+  height: 12px;
+}
+main > section.episodes .content {
+  display: block;
+  height: 250px;
+  width: 100%;
+  border-spacing: 0;
+  overflow: hidden auto;
+  font-family: "SourceSansPro-Regular";
+  border: 1px solid var(--white);
+  padding: 0;
+  border-radius: 3px;
+}
+main > section.episodes .content thead {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #f00;
+}
+main > section.episodes .content thead tr {
+  width: 100%;
+  height: 40px;
+}
+main > section.episodes .content thead tr th {
+  color: var(--primary-color);
+  min-width: 25px;
+  padding: 0 5px;
+  background: var(--white-1);
+}
+main > section.episodes .content thead tr th div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+}
+main > section.episodes .content thead tr th div > span {
+  cursor: pointer;
+}
+main > section.episodes .content thead tr th div > span::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  top: -1px;
+  right: 4px;
+  height: 0;
+  width: 0;
+  transform-origin: center 3px;
+  transform: none;
+  border-top: 7px solid var(--primary-color);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  transition: all 0.3s ease-out;
+}
+main > section.episodes .content thead tr th div > span.reverse::before {
+  transform: rotate(-0.5turn);
+}
+main > section.episodes .content thead tr th:first-child {
+  width: 30px;
+}
+main > section.episodes .content tbody {
+  white-space: nowrap;
+}
+main > section.episodes .content tbody tr {
+  color: var(--white-1);
+  height: 40px;
+}
+main > section.episodes .content tbody tr td {
+  pointer-events: none;
+  padding: 0 0.5em;
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-right: 1px solid var(--white-1);
+  border-bottom: 1px solid var(--white-1);
+}
+main > section.episodes .content tbody tr td:first-child {
+  width: 40px;
+  text-align: center;
+}
+main > section.episodes .content tbody tr td:last-child {
+  text-align: center;
+  border-right: none;
+}
+main > section.episodes .content tbody tr:last-child td {
+  border-bottom: none;
+}
+main > section.episodes .content::-webkit-scrollbar {
+  border-radius: 0 3px 3px 0;
+}
+main > section.reviews .content {
+  font-family: "Poppins-Light";
+  color: var(--white-1);
+  gap: 30px;
+}
+main > section.reviews .content .review {
+  position: relative;
+  height: 80px;
+  gap: 10px;
+}
+main > section.reviews .content .review .avatar {
+  overflow: hidden;
+  border-radius: 3px;
+  background: var(--white-3);
+  height: 80px;
+  width: 80px;
+}
+main > section.reviews .content .review .avatar img {
+  width: 80px;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main > section.reviews .content .review .text p {
+  height: calc(100% - 33px);
+  padding: 5px;
+}
+main > section.reviews .content .review::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  bottom: -15px;
+  border: none;
+  border-bottom: 1px solid var(--white-2);
+}
+main > section.reviews .content .review:last-child::after {
+  border-bottom: none;
+}/*# sourceMappingURL=single-presentation.css.map */
