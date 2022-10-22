@@ -540,6 +540,11 @@ body .page-content header .search.active.content .result .result-box {
     height: auto;
   }
 }
+@media screen and (max-width: 700px) {
+  body .page-content header .search {
+    display: none;
+  }
+}
 body .page-content main {
   height: 600px;
   border-left: 1px solid var(--white-1);
@@ -583,7 +588,6 @@ body .page-content footer > div.container section .content {
 body .page-content footer > div.container section .content li {
   font-family: "SourceSansPro-Light";
   margin: 3px 0;
-  color: var(--white-1);
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -591,27 +595,18 @@ body .page-content footer > div.container section .content li {
           user-select: none;
 }
 body .page-content footer > div.container section .content li a {
+  color: var(--grey-1);
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-size: 1.1rem;
   text-decoration: none;
-  color: unset;
   cursor: pointer;
+  transition: all 0.2s;
 }
-body .page-content footer > div.container section .content li a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0);
-  transition: all 0.4s;
-  left: 0;
-}
-body .page-content footer > div.container section .content li a:hover::after {
-  background: var(--white-1);
+body .page-content footer > div.container section .content li a:hover {
+  color: var(--white);
 }
 body .page-content footer > div.container section:hover h3::after {
   margin: 10px 35px;
