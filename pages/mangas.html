@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 
-    <title>Document</title>
+    <title>Mangas</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/sheet.css">
+    <link rel="stylesheet" href="../assets/css/animes.css">
 
     <script src="../assets/js/app.js"></script>
 
@@ -34,7 +35,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/pages/mangas.html" class="d-flex row space-between align-center">
+                        <a href="/pages/mangas.html" class="d-flex row space-between align-center active">
                             Mangas <img src="../assets/images/book.png" alt="Mangas">
                         </a>
                     </li>
@@ -116,7 +117,62 @@
         </header>
 
         <main role="main">
-            <!--  -->
+            <h1 class="title">Mangas</h1>
+
+            <div class="container d-flex column align-center">
+                <div class="controllers d-flex row space-between align-center">
+                    <div class="search-box d-flex row space-between align-center">
+                        <input type="text" name="search" id="search" placeholder="Rechercher...">
+
+                        <button class="submit-search d-flex justify-center align-center" type="button">
+                            <img src="../assets/images/search.svg" alt="Search">
+                        </button>
+                    </div>
+
+                    <div class="filters">
+                        <div class="box d-flex space-between align-center">
+                            <span class="col-center">Filtres</span>
+                            <img src="../assets/images/filter.png" alt="Filters">
+                        </div>
+                    
+                        <div class="params">
+                            <h3 class="text" style="--i: 25px;">Trier par :</h3>
+
+                            <ul class="filters" style="--i: 32.5px;">
+                                <li class="active d-flex align-center">A → Z</li>
+                                <li class="d-flex align-center">Popularité</li>
+                                <li class="d-flex align-center">Date</li>
+                            </ul>
+
+                            <div class="reverse d-flex row align-center" style="--i: 50px;">
+                                <input type="checkbox" name="reverse-filters" id="reverse-filters">
+                                <label for="reverse-filters">Inverser</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content d-flex wrap justify-center align-center">                    
+                    <div class="card d-flex column space-evenly align-center">
+                        <div class="img">
+                            <div class="favourite">
+                                <img src="../assets/images/bookmark.png" alt="Favourite" class="favourite">
+                            </div>
+
+                            <img src="../assets/images/test/naruto.jpg" alt="Naruto">
+                        </div>
+
+                        <div class="name">Naruto</div>
+                    </div>
+                </div>
+
+                <div class="loading-animation d-flex column justify-center align-center">
+                    <div class="loader d-flex column justify-center">
+                        <img src="../assets/images/loading-part.svg" alt="Loading">
+                        <img src="../assets/images/loading-part.svg" alt="Loading">
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer class="d-flex column">
@@ -168,6 +224,15 @@
             <img src="../assets/images/loading-part.svg" alt="Loading">
         </div>
     </div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            if (
+                Math.floor(document.documentElement.scrollTop + document.documentElement.clientHeight)
+                / document.documentElement.scrollHeight === 1
+            ) document.querySelector('main > .container').classList.add('loading');
+        });
+    </script>
 
 </body>
 </html>
