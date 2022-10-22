@@ -209,6 +209,28 @@ main > section.description .controllers .share .icon {
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
 }
+main > section.description .controllers .share .box {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: var(--white-1);
+  font-family: "Poppins-Light";
+  font-size: 0.9rem;
+  list-style: none;
+  padding: 2px 8px;
+  box-shadow: 0 0 10px 1px rgba(85, 85, 85, 0.4666666667);
+}
+main > section.description .controllers .share .box li {
+  margin: 5px 0;
+  color: var(--grey-5);
+  transition: all 0.2s;
+}
+main > section.description .controllers .share .box li:hover {
+  color: var(--primary-color);
+}
+main > section.description .controllers .share.active .box {
+  display: block;
+}
 main > section.description .controllers .share::before {
   content: "";
   position: absolute;

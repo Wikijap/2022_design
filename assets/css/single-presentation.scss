@@ -1,4 +1,3 @@
-
 // Filters
 $white-filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
 $primary-color-filter: invert(39%) sepia(8%) saturate(2096%) hue-rotate(156deg) brightness(88%) contrast(83%);
@@ -224,6 +223,28 @@ main {
                         font-size: 2rem;
                         writing-mode: vertical-rl;
                     }
+
+                    .box {
+                        position: absolute;
+                        top: 35px;
+                        right: 0;
+                        background: var(--white-1);
+                        font-family: "Poppins-Light";
+                        font-size: .9rem;
+                        list-style: none;
+                        padding: 2px 8px;
+                        box-shadow: 0 0 10px 1px #5557;
+                        
+                        li {
+                            margin: 5px 0;
+                            color: var(--grey-5);
+                            transition: all .2s;
+
+                            &:hover { color: var(--primary-color) }
+                        }
+                    }
+
+                    &.active .box { display: block }
 
                     &::before {
                         content: '';

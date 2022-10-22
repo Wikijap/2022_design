@@ -183,8 +183,13 @@
                         </div>
                     </div>
 
-                    <div class="share">
+                    <div class="share" onclick="this.classList.toggle('active')">
                         <span class="icon">...</span>
+
+                        <ul class="box d-none">
+                            <li>Partager</li>
+                            <li>Signaler</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -437,7 +442,7 @@
         </div>
     </div>
 
-    <script>window.scrollTo({ top: document.documentElement.scrollHeight - document.documentElement.clientHeight });</script>
+    <script>window.scrollTo(0, 950);</script>
 
 </body>
 </html>
