@@ -245,7 +245,7 @@ main#auth {
         }
     }
 
-    .form-container {
+    > .form-container {
         background: var(--white);
         padding: 1.5em;
         border-radius: 1em;
