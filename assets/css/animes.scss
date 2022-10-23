@@ -219,7 +219,7 @@ main {
 
                     &.active {
                         transform: none;
-                        height: auto;
+                        height: var(--s);
 
                         .text, .filters, .reverse {
                             opacity: 1;

@@ -208,7 +208,7 @@ main .container .controllers .filters .params::before {
 }
 main .container .controllers .filters .params.active {
   transform: none;
-  height: auto;
+  height: var(--s);
 }
 main .container .controllers .filters .params.active .text, main .container .controllers .filters .params.active .filters, main .container .controllers .filters .params.active .reverse {
   opacity: 1;

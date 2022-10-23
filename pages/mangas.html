@@ -130,18 +130,18 @@
                     </div>
 
                     <div class="filters">
-                        <div class="box d-flex space-between align-center">
+                        <div class="box d-flex space-between align-center" onclick="document.querySelector('.filters .params').classList.toggle('active')">
                             <span class="col-center">Filtres</span>
                             <img src="../assets/images/filter.png" alt="Filters">
                         </div>
                     
-                        <div class="params">
+                        <div class="params" style="--s: 110px;">
                             <h3 class="text" style="--i: 25px;">Trier par :</h3>
 
                             <ul class="filters" style="--i: 32.5px;">
-                                <li class="active d-flex align-center">A → Z</li>
-                                <li class="d-flex align-center">Popularité</li>
-                                <li class="d-flex align-center">Date</li>
+                                <li class="active d-flex align-center" onclick="this.classList.toggle('active')">A → Z</li>
+                                <li class="d-flex align-center" onclick="this.classList.toggle('active')">Popularité</li>
+                                <li class="d-flex align-center" onclick="this.classList.toggle('active')">Date</li>
                             </ul>
 
                             <div class="reverse d-flex row align-center" style="--i: 50px;">
