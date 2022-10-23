@@ -126,6 +126,10 @@ main {
                         a {
                             text-decoration: none;
                             color: inherit;
+                            opacity: 1;
+                            transition: all .2s ease;
+
+                            &:hover { opacity: .8 }
                         }
 
                         &:last-child { border-bottom: none; }

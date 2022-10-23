@@ -115,6 +115,11 @@ main > section.main-informations .container .content p span::after {
 main > section.main-informations .container .content p a {
   text-decoration: none;
   color: inherit;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+main > section.main-informations .container .content p a:hover {
+  opacity: 0.8;
 }
 main > section.main-informations .container .content p:last-child {
   border-bottom: none;
