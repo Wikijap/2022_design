@@ -104,21 +104,6 @@ main#auth .container > div .form-container .form-content .form .checkbox-option 
   -webkit-text-decoration-color: initial;
           text-decoration-color: initial;
 }
-main#auth .container > div .form-container .form-content .form .submit {
-  margin-top: 1em;
-  border: 3px solid var(--primary-color);
-  width: 50%;
-  height: 36px;
-  border-radius: 18px;
-  font-family: "Poppins-SemiBold";
-  color: var(--white);
-  background: var(--primary-color);
-  transition: all 0.3s;
-}
-main#auth .container > div .form-container .form-content .form .submit:hover, main#auth .container > div .form-container .form-content .form .submit:focus, main#auth .container > div .form-container .form-content .form .submit:target {
-  color: var(--primary-color);
-  background: var(--white);
-}
 main#auth .container > div .alternative {
   z-index: 2;
   color: var(--white-1);
@@ -245,8 +230,10 @@ main#auth > .form-container .form-content .input-box {
 main#auth > .form-container .form-content .g-recaptcha {
   margin: 10px 0;
 }
-main#auth > .form-container .form-content .submit-btn {
-  margin-top: 12px;
+
+main#auth .container > div .form-container .form-content .form .submit,
+main#auth > .form-container .form-content .submit {
+  margin-top: 1em;
   border: 3px solid var(--primary-color);
   width: 50%;
   height: 36px;
@@ -256,7 +243,49 @@ main#auth > .form-container .form-content .submit-btn {
   background: var(--primary-color);
   transition: all 0.3s;
 }
-main#auth > .form-container .form-content .submit-btn:hover, main#auth > .form-container .form-content .submit-btn:focus, main#auth > .form-container .form-content .submit-btn:target {
+main#auth .container > div .form-container .form-content .form .submit span,
+main#auth > .form-container .form-content .submit span {
+  pointer-events: none;
+  display: initial;
+}
+main#auth .container > div .form-container .form-content .form .submit .loading-animation,
+main#auth > .form-container .form-content .submit .loading-animation {
+  position: relative;
+  display: none;
+}
+main#auth .container > div .form-container .form-content .form .submit .loading-animation img,
+main#auth > .form-container .form-content .submit .loading-animation img {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
+}
+main#auth .container > div .form-container .form-content .form .submit:hover:not(.loading), main#auth .container > div .form-container .form-content .form .submit:focus:not(.loading), main#auth .container > div .form-container .form-content .form .submit:target:not(.loading),
+main#auth > .form-container .form-content .submit:hover:not(.loading),
+main#auth > .form-container .form-content .submit:focus:not(.loading),
+main#auth > .form-container .form-content .submit:target:not(.loading) {
   color: var(--primary-color);
   background: var(--white);
+}
+main#auth .container > div .form-container .form-content .form .submit.loading,
+main#auth > .form-container .form-content .submit.loading {
+  pointer-events: none;
+}
+main#auth .container > div .form-container .form-content .form .submit.loading span,
+main#auth > .form-container .form-content .submit.loading span {
+  display: none;
+}
+main#auth .container > div .form-container .form-content .form .submit.loading .loading-animation,
+main#auth > .form-container .form-content .submit.loading .loading-animation {
+  display: flex;
+}
+main#auth .container > div .form-container .form-content .form .submit.loading .loading-animation img:nth-child(1),
+main#auth > .form-container .form-content .submit.loading .loading-animation img:nth-child(1) {
+  -webkit-animation: turn-animation 0.8s linear infinite;
+          animation: turn-animation 0.8s linear infinite;
+}
+main#auth .container > div .form-container .form-content .form .submit.loading .loading-animation img:nth-child(2),
+main#auth > .form-container .form-content .submit.loading .loading-animation img:nth-child(2) {
+  -webkit-animation: turn-animation 0.8s cubic-bezier(0.445, 0.1, 0.55, 0.9) 100ms infinite;
+          animation: turn-animation 0.8s cubic-bezier(0.445, 0.1, 0.55, 0.9) 100ms infinite;
 }/*# sourceMappingURL=auth.css.map */
