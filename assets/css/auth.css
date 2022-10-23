@@ -115,7 +115,7 @@ main#auth .container > div .form-container .form-content .form .submit {
   background: var(--primary-color);
   transition: all 0.3s;
 }
-main#auth .container > div .form-container .form-content .form .submit:hover {
+main#auth .container > div .form-container .form-content .form .submit:hover, main#auth .container > div .form-container .form-content .form .submit:focus, main#auth .container > div .form-container .form-content .form .submit:target {
   color: var(--primary-color);
   background: var(--white);
 }
@@ -256,7 +256,7 @@ main#auth .form-container .form-content .submit-btn {
   background: var(--primary-color);
   transition: all 0.3s;
 }
-main#auth .form-container .form-content .submit-btn:hover {
+main#auth .form-container .form-content .submit-btn:hover, main#auth .form-container .form-content .submit-btn:focus, main#auth .form-container .form-content .submit-btn:target {
   color: var(--primary-color);
   background: var(--white);
 }/*# sourceMappingURL=auth.css.map */
