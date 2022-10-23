@@ -1,24 +1,24 @@
-main {
+main#resources-list {
   min-height: 600px;
   height: auto !important;
 }
-main .title {
+main#resources-list .title {
   font-family: "Poppins-SemiBold";
   text-align: center;
   font-size: 2.3rem;
   margin: 1em 0 0.5em;
   text-decoration: underline;
 }
-main .container {
+main#resources-list .container {
   padding: 1em calc(1em + 12px) 1em 0;
   width: 100%;
 }
-main .container .controllers {
+main#resources-list .container .controllers {
   width: 85.5%;
   height: 70px;
   margin-bottom: 0.5em;
 }
-main .container .controllers .search-box {
+main#resources-list .container .controllers .search-box {
   width: calc(100% - 400px);
   height: 50px;
   border-radius: 25px;
@@ -26,7 +26,7 @@ main .container .controllers .search-box {
   border: 1px solid var(--white-2);
   box-shadow: 0 0 10px 1px var(--white-2);
 }
-main .container .controllers .search-box input {
+main#resources-list .container .controllers .search-box input {
   border: none;
   background: none;
   height: calc(100% - 1em);
@@ -37,19 +37,19 @@ main .container .controllers .search-box input {
   color: var(--black-1);
   width: calc(100% - 50px);
 }
-main .container .controllers .search-box input::-moz-placeholder {
+main#resources-list .container .controllers .search-box input::-moz-placeholder {
   color: var(--grey-3);
   letter-spacing: 1pt;
 }
-main .container .controllers .search-box input:-ms-input-placeholder {
+main#resources-list .container .controllers .search-box input:-ms-input-placeholder {
   color: var(--grey-3);
   letter-spacing: 1pt;
 }
-main .container .controllers .search-box input::placeholder {
+main#resources-list .container .controllers .search-box input::placeholder {
   color: var(--grey-3);
   letter-spacing: 1pt;
 }
-main .container .controllers .search-box button {
+main#resources-list .container .controllers .search-box button {
   width: 50px;
   height: 50px;
   border: none;
@@ -59,7 +59,7 @@ main .container .controllers .search-box button {
   transition: all 0.2s;
   box-shadow: -2px 0 10px rgba(122, 122, 122, 0.3764705882);
 }
-main .container .controllers .search-box button img {
+main#resources-list .container .controllers .search-box button img {
   position: relative;
   left: 3px;
   width: 30px;
@@ -68,15 +68,15 @@ main .container .controllers .search-box button img {
      object-fit: contain;
   filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
 }
-main .container .controllers .search-box button:focus, main .container .controllers .search-box button:hover, main .container .controllers .search-box button:target {
+main#resources-list .container .controllers .search-box button:focus, main#resources-list .container .controllers .search-box button:hover, main#resources-list .container .controllers .search-box button:target {
   opacity: 85%;
 }
-main .container .controllers .filters {
+main#resources-list .container .controllers .filters {
   position: relative;
   width: 250px;
   height: 50px;
 }
-main .container .controllers .filters .box {
+main#resources-list .container .controllers .filters .box {
   position: relative;
   z-index: 6;
   border-radius: 25px;
@@ -88,20 +88,20 @@ main .container .controllers .filters .box {
   box-shadow: 0 0 10px 1px var(--white-2);
   cursor: pointer;
 }
-main .container .controllers .filters .box span {
+main#resources-list .container .controllers .filters .box span {
   margin: calc(25px - 0.5rem) 0;
   height: 100%;
   font-size: 1rem;
   font-family: "Poppins-SemiBold";
   pointer-events: none;
 }
-main .container .controllers .filters .box img {
+main#resources-list .container .controllers .filters .box img {
   width: 35px;
   height: 35px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .container .controllers .filters .params {
+main#resources-list .container .controllers .filters .params {
   position: absolute;
   width: calc(100% - 20px);
   background: var(--white);
@@ -114,34 +114,34 @@ main .container .controllers .filters .params {
   transform: translateY(-25px);
   transition: all 0.6s ease;
 }
-main .container .controllers .filters .params .text, main .container .controllers .filters .params .filters, main .container .controllers .filters .params .reverse {
+main#resources-list .container .controllers .filters .params .text, main#resources-list .container .controllers .filters .params .filters, main#resources-list .container .controllers .filters .params .reverse {
   opacity: 0;
   transform: translateY(calc(0px - var(--i)));
   transition: all 0.3s ease;
 }
-main .container .controllers .filters .params .filters {
+main#resources-list .container .controllers .filters .params .filters {
   margin: 5px 0 12px;
   list-style: none;
 }
-main .container .controllers .filters .params .filters li {
+main#resources-list .container .controllers .filters .params .filters li {
   position: relative;
   font-family: "Poppins-Light";
   cursor: pointer;
   margin: 3px 0;
 }
-main .container .controllers .filters .params .filters li::before, main .container .controllers .filters .params .filters li::after {
+main#resources-list .container .controllers .filters .params .filters li::before, main#resources-list .container .controllers .filters .params .filters li::after {
   content: "";
   display: block;
   border-radius: 50%;
 }
-main .container .controllers .filters .params .filters li::before {
+main#resources-list .container .controllers .filters .params .filters li::before {
   width: 8px;
   height: 8px;
   background: var(--white);
   margin-right: 5px;
   border: 1px solid var(--primary-color);
 }
-main .container .controllers .filters .params .filters li::after {
+main#resources-list .container .controllers .filters .params .filters li::after {
   position: absolute;
   background: rgba(68, 102, 119, 0.2);
   width: 10px;
@@ -149,17 +149,17 @@ main .container .controllers .filters .params .filters li::after {
   transform: scale(0);
   transition: all 250ms;
 }
-main .container .controllers .filters .params .filters li.active::before {
+main#resources-list .container .controllers .filters .params .filters li.active::before {
   background: var(--primary-color);
 }
-main .container .controllers .filters .params .filters li:hover::after {
+main#resources-list .container .controllers .filters .params .filters li:hover::after {
   transform: scale(1.65);
 }
-main .container .controllers .filters .params .reverse {
+main#resources-list .container .controllers .filters .params .reverse {
   width: 100%;
   margin: 2px;
 }
-main .container .controllers .filters .params .reverse input {
+main#resources-list .container .controllers .filters .params .reverse input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -171,7 +171,7 @@ main .container .controllers .filters .params .reverse input {
   border: 1px solid var(--primary-color);
   transition: all 0.4s ease;
 }
-main .container .controllers .filters .params .reverse input::after {
+main#resources-list .container .controllers .filters .params .reverse input::after {
   content: "";
   display: block;
   position: relative;
@@ -182,18 +182,18 @@ main .container .controllers .filters .params .reverse input::after {
   transform: translateY(1px);
   transition: all 0.3s ease;
 }
-main .container .controllers .filters .params .reverse input:checked {
+main#resources-list .container .controllers .filters .params .reverse input:checked {
   background: var(--primary-color);
 }
-main .container .controllers .filters .params .reverse input:checked::after {
+main#resources-list .container .controllers .filters .params .reverse input:checked::after {
   background: var(--white);
   translate: 16px;
 }
-main .container .controllers .filters .params .reverse label {
+main#resources-list .container .controllers .filters .params .reverse label {
   cursor: pointer;
   font-family: "SourceSansPro-Regular";
 }
-main .container .controllers .filters .params::before {
+main#resources-list .container .controllers .filters .params::before {
   content: "";
   display: block;
   position: absolute;
@@ -206,18 +206,18 @@ main .container .controllers .filters .params::before {
   opacity: 0;
   transition: all 0.6s;
 }
-main .container .controllers .filters .params.active {
+main#resources-list .container .controllers .filters .params.active {
   transform: none;
   height: var(--s);
 }
-main .container .controllers .filters .params.active .text, main .container .controllers .filters .params.active .filters, main .container .controllers .filters .params.active .reverse {
+main#resources-list .container .controllers .filters .params.active .text, main#resources-list .container .controllers .filters .params.active .filters, main#resources-list .container .controllers .filters .params.active .reverse {
   opacity: 1;
   transform: none;
 }
-main .container .controllers .filters .params.active::before {
+main#resources-list .container .controllers .filters .params.active::before {
   opacity: 1;
 }
-main .container .content {
+main#resources-list .container .content {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -225,7 +225,7 @@ main .container .content {
   padding: 1em;
   gap: 30px;
 }
-main .container .content .card {
+main#resources-list .container .content .card {
   position: relative;
   width: 215px;
   height: 290px;
@@ -240,7 +240,7 @@ main .container .content .card {
   color: var(--primary-color);
   overflow: hidden;
 }
-main .container .content .card .img {
+main#resources-list .container .content .card .img {
   position: relative;
   width: calc(100% - 1em);
   height: calc(100% - 3em - 5px);
@@ -248,13 +248,13 @@ main .container .content .card .img {
   border: 1px solid var(--primary-color);
   border-radius: 4px;
 }
-main .container .content .card .img > img {
+main#resources-list .container .content .card .img > img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .container .content .card .img .favourite {
+main#resources-list .container .content .card .img .favourite {
   position: absolute;
   top: 0;
   right: 0;
@@ -262,7 +262,7 @@ main .container .content .card .img .favourite {
   height: 49.35px;
   z-index: 1;
 }
-main .container .content .card .img .favourite img {
+main#resources-list .container .content .card .img .favourite img {
   margin: 4px 3px;
   width: 20px;
   height: 20px;
@@ -271,7 +271,7 @@ main .container .content .card .img .favourite img {
   background: none;
   filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
 }
-main .container .content .card .img .favourite::before {
+main#resources-list .container .content .card .img .favourite::before {
   content: "";
   display: block;
   width: 70px;
@@ -284,33 +284,33 @@ main .container .content .card .img .favourite::before {
   z-index: -1;
   border: 1px solid var(--primary-color);
 }
-main .container .content .card .name {
+main#resources-list .container .content .card .name {
   font-family: "Poppins-Regular";
   font-size: 0.9rem;
   pointer-events: none;
   padding: 0 10px;
   margin-top: 5px;
 }
-main .container .content .card:hover {
+main#resources-list .container .content .card:hover {
   transform: translateY(-5px);
   background: var(--primary-color);
   color: var(--white);
   box-shadow: 5px 5px 10px #a7a7a7, 8px 8px 10px 2px rgba(102, 102, 102, 0.1333333333);
 }
-main .container .content .card:hover, main .container .content .card:hover .img > img {
+main#resources-list .container .content .card:hover, main#resources-list .container .content .card:hover .img > img {
   border-color: transparent;
 }
-main .container .content .card:hover .img .favourite img {
+main#resources-list .container .content .card:hover .img .favourite img {
   filter: invert(39%) sepia(8%) saturate(2096%) hue-rotate(156deg) brightness(88%) contrast(83%);
 }
-main .container .content .card:hover .img .favourite::before {
+main#resources-list .container .content .card:hover .img .favourite::before {
   background: var(--white);
   border-color: var(--white-3);
 }
-main .container .content .card[data-new=true] .img {
+main#resources-list .container .content .card[data-new=true] .img {
   border-bottom-color: transparent;
 }
-main .container .content .card[data-new=true] .img::after {
+main#resources-list .container .content .card[data-new=true] .img::after {
   content: attr(data-after-text);
   display: flex;
   flex-direction: column;
@@ -329,41 +329,41 @@ main .container .content .card[data-new=true] .img::after {
   border: none;
   border-top: 1px solid var(--primary-color);
 }
-main .container .content .card[data-new=true]:hover .img {
+main#resources-list .container .content .card[data-new=true]:hover .img {
   border-bottom-color: var(--primary-color);
 }
-main .container .content .card[data-new=true]:hover .img::after {
+main#resources-list .container .content .card[data-new=true]:hover .img::after {
   border-top-color: var(--white-3);
   background: var(--white);
   color: var(--primary-color);
 }
-main .container .loading-animation {
+main#resources-list .container .loading-animation {
   margin: 1em 0;
   padding: 1em 0;
   display: none;
 }
-main .container .loading-animation .loader {
+main#resources-list .container .loading-animation .loader {
   position: relative;
   width: 4em;
   height: 4em;
   border-radius: 50%;
 }
-main .container .loading-animation .loader img {
+main#resources-list .container .loading-animation .loader img {
   position: relative;
   width: 100%;
   filter: brightness(15%);
 }
-main .container .loading-animation .loader img:nth-child(1) {
+main#resources-list .container .loading-animation .loader img:nth-child(1) {
   top: 2em;
   -webkit-animation: turn-animation 0.8s linear infinite;
           animation: turn-animation 0.8s linear infinite;
 }
-main .container .loading-animation .loader img:nth-child(2) {
+main#resources-list .container .loading-animation .loader img:nth-child(2) {
   top: -2em;
   -webkit-animation: turn-animation 0.8s cubic-bezier(0.445, 0.1, 0.55, 0.9) 100ms infinite;
           animation: turn-animation 0.8s cubic-bezier(0.445, 0.1, 0.55, 0.9) 100ms infinite;
 }
-main .container .loading-animation .loader::before {
+main#resources-list .container .loading-animation .loader::before {
   content: "";
   display: block;
   position: absolute;
@@ -375,6 +375,6 @@ main .container .loading-animation .loader::before {
   border-radius: 50%;
   border: 7px solid rgba(0, 0, 0, 0.1333333333);
 }
-main .container.loading .loading-animation {
+main#resources-list .container.loading .loading-animation {
   display: initial;
-}/*# sourceMappingURL=animes.css.map */
+}/*# sourceMappingURL=resources-list.css.map */

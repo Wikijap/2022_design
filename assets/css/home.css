@@ -1,21 +1,21 @@
-main {
+main#home {
   min-height: 600px;
   height: auto !important;
 }
-main section h3 {
+main#home section h3 {
   font-family: "Poppins-SemiBold";
   color: var(--black-2);
   padding: 0.5em;
   margin: 10px 10px 15px;
   text-decoration: underline;
 }
-main section.categories {
+main#home section.categories {
   min-height: 250px;
 }
-main section.categories .cards {
+main#home section.categories .cards {
   gap: 0.5em;
 }
-main section.categories .cards .card {
+main#home section.categories .cards .card {
   width: 250px;
   height: 180px;
   background: var(--white);
@@ -27,7 +27,7 @@ main section.categories .cards .card {
   padding: 5px;
   margin: 0.5em 0;
 }
-main section.categories .cards .card .front {
+main#home section.categories .cards .card .front {
   position: relative;
   height: 100%;
   width: 100%;
@@ -35,25 +35,25 @@ main section.categories .cards .card .front {
   background: transparent;
   transition: all 0.4s ease;
 }
-main section.categories .cards .card .front .icon {
+main#home section.categories .cards .card .front .icon {
   width: 40px;
   height: 40px;
   overflow: hidden;
   margin-bottom: 10px;
 }
-main section.categories .cards .card .front .icon img {
+main#home section.categories .cards .card .front .icon img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   filter: invert(39%) sepia(8%) saturate(2096%) hue-rotate(156deg) brightness(88%) contrast(83%);
 }
-main section.categories .cards .card .front .text {
+main#home section.categories .cards .card .front .text {
   margin-top: 1em;
   font-size: 1.1rem;
   font-family: "Poppins-Bold";
 }
-main section.categories .cards .card .background {
+main#home section.categories .cards .card .background {
   position: absolute;
   width: calc(100% - 10px);
   height: calc(100% - 10px);
@@ -64,13 +64,13 @@ main section.categories .cards .card .background {
   transition: all 0.4s ease;
   padding: 5px;
 }
-main section.categories .cards .card .background img {
+main#home section.categories .cards .card .background img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main section.categories .cards .card .carret {
+main#home section.categories .cards .card .carret {
   position: absolute;
   height: 20px;
   width: 20px;
@@ -80,36 +80,36 @@ main section.categories .cards .card .carret {
   transform: scale(120%);
   z-index: 2;
 }
-main section.categories .cards .card .carret img {
+main#home section.categories .cards .card .carret img {
   height: 100%;
   width: 100%;
   filter: invert(39%) sepia(8%) saturate(2096%) hue-rotate(156deg) brightness(88%) contrast(83%);
 }
-main section.categories .cards .card:hover .front {
+main#home section.categories .cards .card:hover .front {
   background: rgba(34, 34, 34, 0.6666666667);
 }
-main section.categories .cards .card:hover .front .icon img {
+main#home section.categories .cards .card:hover .front .icon img {
   filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
 }
-main section.categories .cards .card:hover .front .text {
+main#home section.categories .cards .card:hover .front .text {
   color: var(--white);
 }
-main section.categories .cards .card:hover .background {
+main#home section.categories .cards .card:hover .background {
   opacity: 0.5;
 }
-main section.categories .cards .card:hover .carret img {
+main#home section.categories .cards .card:hover .carret img {
   filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
 }
-main section.gallery {
+main#home section.gallery {
   margin-top: 1em;
   padding: 1em;
 }
-main section.gallery .caroussel {
+main#home section.gallery .caroussel {
   width: 100%;
   min-height: 300px;
   height: 60vh;
 }
-main section.gallery .caroussel .container {
+main#home section.gallery .caroussel .container {
   min-width: 500px;
   min-height: 300px;
   height: 100%;
@@ -121,7 +121,7 @@ main section.gallery .caroussel .container {
   outline: 1px solid var(--white-2);
   box-shadow: 3px -3px 0.7em 3px rgba(185, 185, 185, 0.1882352941), 5px -5px 0.5em 5px rgba(204, 204, 204, 0.1333333333);
 }
-main section.gallery .caroussel .container .carret {
+main#home section.gallery .caroussel .container .carret {
   position: absolute;
   background: transparent;
   height: 100%;
@@ -133,7 +133,7 @@ main section.gallery .caroussel .container .carret {
   transform: none;
   transition: all 0.2s ease;
 }
-main section.gallery .caroussel .container .carret img {
+main#home section.gallery .caroussel .container .carret img {
   position: relative;
   width: 200%;
   left: calc(100% - 0.5em);
@@ -142,22 +142,22 @@ main section.gallery .caroussel .container .carret img {
   pointer-events: none;
   filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
 }
-main section.gallery .caroussel .container .carret.left {
+main#home section.gallery .caroussel .container .carret.left {
   left: 0;
 }
-main section.gallery .caroussel .container .carret.left img {
+main#home section.gallery .caroussel .container .carret.left img {
   transform: scale(1.5) rotate(0.5turn) translate(33.33%, 4px);
 }
-main section.gallery .caroussel .container .carret.right {
+main#home section.gallery .caroussel .container .carret.right {
   right: 0;
 }
-main section.gallery .caroussel .container .carret.right img {
+main#home section.gallery .caroussel .container .carret.right img {
   transform: scale(1.5) translateY(4px);
 }
-main section.gallery .caroussel .container .carret:hover {
+main#home section.gallery .caroussel .container .carret:hover {
   transform: scale(107%);
 }
-main section.gallery .caroussel .container .content {
+main#home section.gallery .caroussel .container .content {
   position: relative;
   width: 100%;
   height: 100%;
@@ -166,35 +166,35 @@ main section.gallery .caroussel .container .content {
   overflow: hidden;
   scroll-behavior: auto;
 }
-main section.gallery .caroussel .container .content article {
+main#home section.gallery .caroussel .container .content article {
   position: relative;
   min-width: 100%;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-main section.gallery .caroussel .container .content article > div {
+main#home section.gallery .caroussel .container .content article > div {
   position: relative;
   width: 50%;
   height: 100%;
 }
-main section.gallery .caroussel .container .content article > div.brand {
+main#home section.gallery .caroussel .container .content article > div.brand {
   background: transparent;
   color: var(--white);
   z-index: 2;
   padding-left: 4em;
 }
-main section.gallery .caroussel .container .content article > div.brand h2 {
+main#home section.gallery .caroussel .container .content article > div.brand h2 {
   opacity: 0;
   margin-top: 2em;
   font-family: "Poppins-Bold";
 }
-main section.gallery .caroussel .container .content article > div.brand p {
+main#home section.gallery .caroussel .container .content article > div.brand p {
   opacity: 0;
   margin: 2em 2em 0 0;
   font-family: "Poppins-Light";
 }
-main section.gallery .caroussel .container .content article > div.brand button {
+main#home section.gallery .caroussel .container .content article > div.brand button {
   position: absolute;
   bottom: 3em;
   border: none;
@@ -204,7 +204,7 @@ main section.gallery .caroussel .container .content article > div.brand button {
   opacity: 0;
   background: none;
 }
-main section.gallery .caroussel .container .content article > div.brand button span {
+main#home section.gallery .caroussel .container .content article > div.brand button span {
   width: 100px;
   height: 34px;
   border-radius: 17px;
@@ -214,11 +214,11 @@ main section.gallery .caroussel .container .content article > div.brand button s
   color: var(--primary-color);
   border: 3px solid var(--white);
 }
-main section.gallery .caroussel .container .content article > div.brand button:focus span, main section.gallery .caroussel .container .content article > div.brand button:hover span, main section.gallery .caroussel .container .content article > div.brand button:target span {
+main#home section.gallery .caroussel .container .content article > div.brand button:focus span, main#home section.gallery .caroussel .container .content article > div.brand button:hover span, main#home section.gallery .caroussel .container .content article > div.brand button:target span {
   background: var(--primary-color);
   color: var(--white-1);
 }
-main section.gallery .caroussel .container .content article > div.brand::before {
+main#home section.gallery .caroussel .container .content article > div.brand::before {
   content: "";
   display: block;
   position: absolute;
@@ -230,24 +230,24 @@ main section.gallery .caroussel .container .content article > div.brand::before 
   transform: rotate(10deg);
   z-index: -1;
 }
-main section.gallery .caroussel .container .content article > div.post {
+main#home section.gallery .caroussel .container .content article > div.post {
   z-index: 1;
   background: var(--black-1);
 }
-main section.gallery .caroussel .container .content article > div.post .background {
+main#home section.gallery .caroussel .container .content article > div.post .background {
   position: absolute;
   right: 0;
   width: 100%;
   height: 100%;
   opacity: 45%;
 }
-main section.gallery .caroussel .container .content article > div.post .background img {
+main#home section.gallery .caroussel .container .content article > div.post .background img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main section.gallery .caroussel .container .content article > div.post .details {
+main#home section.gallery .caroussel .container .content article > div.post .details {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -256,30 +256,30 @@ main section.gallery .caroussel .container .content article > div.post .details 
   text-align: right;
   opacity: 0;
 }
-main section.gallery .caroussel .container .content article > div.post .details .author {
+main#home section.gallery .caroussel .container .content article > div.post .details .author {
   font-family: "SourceSansPro-SemiBold";
 }
-main section.gallery .caroussel .container .content article > div.post .details .description {
+main#home section.gallery .caroussel .container .content article > div.post .details .description {
   font-size: 0.9rem;
 }
-main section.gallery .caroussel .container .content article > div.post .details .description .title {
+main#home section.gallery .caroussel .container .content article > div.post .details .description .title {
   font-family: "Poppins-Light";
 }
-main section.gallery .caroussel .container .content article > div.post .details .description .date {
+main#home section.gallery .caroussel .container .content article > div.post .details .description .date {
   font-family: "SourceSansPro-Regular";
 }
-main section.gallery .caroussel .container .content article.animate .brand h2, main section.gallery .caroussel .container .content article.animate .brand p, main section.gallery .caroussel .container .content article.animate .brand button,
-main section.gallery .caroussel .container .content article.animate .post .background img, main section.gallery .caroussel .container .content article.animate .post .details {
+main#home section.gallery .caroussel .container .content article.animate .brand h2, main#home section.gallery .caroussel .container .content article.animate .brand p, main#home section.gallery .caroussel .container .content article.animate .brand button,
+main#home section.gallery .caroussel .container .content article.animate .post .background img, main#home section.gallery .caroussel .container .content article.animate .post .details {
   transition: opacity 350ms ease-out;
   opacity: 1;
 }
-main section.gallery .caroussel .container .content article.animate .brand p {
+main#home section.gallery .caroussel .container .content article.animate .brand p {
   transition-delay: 175ms;
 }
-main section.gallery .caroussel .container .content article.animate .brand button, main section.gallery .caroussel .container .content article.animate .post .details {
+main#home section.gallery .caroussel .container .content article.animate .brand button, main#home section.gallery .caroussel .container .content article.animate .post .details {
   transition-delay: 350ms;
 }
-main section.gallery .caroussel .index {
+main#home section.gallery .caroussel .index {
   position: absolute;
   height: 20px;
   min-width: 80px;
@@ -289,12 +289,12 @@ main section.gallery .caroussel .index {
   gap: 5px;
   z-index: 2;
 }
-main section.gallery .caroussel .index > span {
+main#home section.gallery .caroussel .index > span {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background: var(--grey-2);
 }
-main section.gallery .caroussel .index > span.current {
+main#home section.gallery .caroussel .index > span.current {
   background: var(--white);
 }/*# sourceMappingURL=home.css.map */
