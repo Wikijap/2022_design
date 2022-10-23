@@ -730,3 +730,104 @@ body {
     from { transform: rotate(0); }
     to { transform: rotate(360deg);}
 }
+
+/* Inputs */
+.input-box {
+	width: 250px;
+	height: 44px;
+	background: var(--white);
+	border: 2px solid var(--grey-3);
+	border-radius: 5px;
+	position: relative;
+	margin: 10px 0;
+	transition: all .4s;
+
+	input {
+		border: none;
+		outline: none;
+		background: none;
+		font-size: 1rem;
+		font-family: "SourceSansPro-Regular";
+		width: calc(100% - 20px);
+		height: 100%;
+		padding: 0 10px;
+		transform: translateY(-3px);
+		color: var(--black-3);
+
+		&::placeholder {
+			color: transparent;
+			font-family: "SourceSansPro-Light";
+			transition: all .4s;
+			user-select: none;
+		}
+
+		&[type="date"]::-webkit-calendar-picker-indicator {
+			transform: translateY(3px);
+			opacity: 0;
+			transition: all .4s;
+		}
+	}
+
+	.password-visibility {
+		position: absolute;
+		right: 10px;
+		border: none;
+		outline: none;
+		background: none;
+		transition: all .2s;
+		opacity: 0;
+		cursor: pointer;
+		height: 20px;
+
+		img {
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	label {
+		pointer-events: none;
+		position: absolute;
+		left: 5px;
+		padding: 2px 3px;
+		transition: all .4s ease;
+		color: var(--grey-7);
+		background: var(--white);
+		font-family: "SourceSansPro-Regular";
+		animation: input-animate .4s ease reverse;
+		top: 8px;
+		font-size: 1rem;
+	}
+
+	&:hover { border: 2px solid var(--black-3) }
+
+	&.focused, &.complete {
+		border: 2px solid #4d7386;
+
+		input {
+			&::placeholder { color: var(--grey-3) }
+			&::-webkit-calendar-picker-indicator {
+				opacity: 1;
+				filter: invert(39%) sepia(8%) saturate(2096%) hue-rotate(156deg) brightness(88%) contrast(83%);
+			}
+		}
+
+		label {
+			animation: input-animate .4s ease;
+			color: #4d7386;
+			top: -12px;
+			font-size: .9rem;
+		}
+
+		.password-visibility {
+			opacity: 45%;
+			pointer-events: initial;
+			&:hover, &:focus, &:target { opacity: .8}
+		}
+	}
+
+	@keyframes input-animate {
+		from { top: 8px; font-size: 1rem }
+		to { top: -12px; font-size: .9rem }
+	}
+}

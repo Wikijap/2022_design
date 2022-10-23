@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 
-    <title>S'authentifier</title>
+    <title>Document</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,11 +14,12 @@
     <link rel="stylesheet" href="../assets/css/sheet.css">
     <link rel="stylesheet" href="../assets/css/auth.css">
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="../assets/js/app.js"></script>
     <script src="../assets/js/auth.js"></script>
 
 </head>
-<body class="d-flex row">
+<body class="d-flex row loaded">
 
     <div class="menu">
         <div class="container d-flex column space-between">
@@ -117,90 +118,26 @@
             </div>
         </header>
 
-        <main role="main" id="auth">
-            <div class="container d-flex row wrap">
-                <div class="login d-flex row align-center">
-                    <div class="form-container col-center">
-                        <div class="form-content col-center">
-                            <h2>Connexion</h2>
-        
-                            <form class="form d-flex column align-center" method="post">
-                                <div class="input-box col-center">
-                                    <input type="email" name="email" id="email" placeholder="Adresse mail" autocomplete="email" required>
-                                    <label for="email">Adresse mail</label>
-                                </div>
-        
-                                <div class="input-box col-center input-password">
-                                    <input type="password" name="password" id="password" placeholder="Mot de passe" data-type="password" autocomplete="current-password" required>
-        
-                                    <button class="password-visibility d-block" id="toggle-visibility" type="button">
-                                        <img src="../assets/images/eye.svg" data-alternative-src="../assets/images/eye-slash.svg" alt="Show Password">
-                                    </button>
-        
-                                    <label for="password">Mot de passe</label>
-                                </div>
-        
-                                <div class="checkbox-option">
-                                    <input type="checkbox" name="remember-me" id="remember-me">
-        
-                                    <label for="remember-me">
-                                        Se souvenir de moi <a href="/#">?</a>
-                                    </label>
-                                </div>
-        
-                                <button type="submit" class="submit col-center">
-                                    Se connecter
-                                </button>
-                            </form>
-                        </div>
+        <main role="main" class="col-center" id="auth">
+            <div class="form-container col-center">
+                <h2>Inscription</h2>
+
+                <form class="form-content d-flex column align-center" method="post">
+                    <div class="input-box col-center">
+                        <input type="password" name="password" id="password" placeholder="Mot de passe" autocomplete="new-password" required>
+                        <label for="password">Mot de passe</label>
                     </div>
 
-                    <div class="alternative col-center">
-                        Vous n'avez pas encore de compte ?
-                        <button type="button" onclick="document.querySelector('main .container').classList.add('register')">S'inscrire</button>
-
-                        <p>Ou alors se connecter avec <a href="/#">Cod'ons</a></p>
-                    </div>
-                </div>
-
-                <div class="register d-flex row-reverse align-center">
-                    <div class="form-container col-center">
-                        <div class="form-content col-center">
-                            <h2>Inscription</h2>
-        
-                            <form class="form d-flex column align-center" method="post" onsubmit="window.location.replace('/pages/auth-2.html')">
-                                <div class="input-box col-center">
-                                    <input type="username" name="username" id="username" placeholder="Nom d'utilisateur" autocomplete="username" required>
-                                    <label for="username">Nom d'utilisateur</label>
-                                </div>
-
-                                <div class="input-box col-center">
-                                    <input type="email" name="email" id="email" placeholder="Adresse mail" autocomplete="email" required>
-                                    <label for="email">Adresse mail</label>
-                                </div>
-
-                                <div class="input-box col-center">
-                                    <input type="date" name="birth" id="birth" placeholder="Date de naissance" autocomplete="bday" required autofocus>
-                                    <label for="birth">Date de naissance</label>
-                                </div>
-        
-                                <button type="submit" class="submit col-center">
-                                    Continuer
-                                </button>
-                            </form>
-                        </div>
+                    <div class="input-box col-center">
+                        <input type="password" name="password" id="password" placeholder="Mot de passe" autocomplete="new-password" required>
+                        <label for="password">Confirmation mot de pase</label>
                     </div>
 
-                    <div class="alternative col-center">
-                        Vous avez déjà un compte ?
-                        <button type="button" onclick="document.querySelector('main .container').classList.remove('register')">Se connecter</button>
+                    <div class="g-recaptcha" data-sitekey="6LcgdqUiAAAAAOzKxZIlcucbg3VhjtBHiturB-H2"></div>
 
-                        <p>Ou alors se connecter avec <a href="/#">Cod'ons</a></p>
-                    </div>
-                </div>
+                    <button type="submit" class="submit-btn">S'inscrire</button>
+                </form>
             </div>
-
-            <div class="animation-rect"></div>
         </main>
 
         <footer class="d-flex column">

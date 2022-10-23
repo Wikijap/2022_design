@@ -1,3 +1,262 @@
 main#auth {
-  height: 500px;
+  position: relative;
+  min-height: 500px;
+  height: calc(100vh - 160px);
+}
+main#auth .container {
+  width: 100%;
+  height: 100%;
+}
+main#auth .container > div {
+  width: 100%;
+  height: 100%;
+}
+main#auth .container > div > div {
+  width: 50%;
+  height: 100%;
+}
+main#auth .container > div .form-container .form-content {
+  position: relative;
+  width: 300px;
+  background: var(--white);
+  padding: 1.5em 0.5em;
+  border-radius: 1em;
+  transition: all 0.7s ease;
+  opacity: 1;
+  transform: none;
+}
+main#auth .container > div .form-container .form-content > h2 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-family: "Poppins-SemiBold";
+  margin-bottom: 12px;
+}
+main#auth .container > div .form-container .form-content .form {
+  gap: 4px;
+}
+main#auth .container > div .form-container .form-content .form .checkbox-option {
+  width: 100%;
+  height: 30px;
+  margin: 5px 0;
+}
+main#auth .container > div .form-container .form-content .form .checkbox-option input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  outline: none;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background: var(--grey-1);
+  transition: all 0.3s;
+  overflow: hidden;
+  top: 8px;
+}
+main#auth .container > div .form-container .form-content .form .checkbox-option input::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #4d7386;
+  transition: 0.4s ease-in-out;
+}
+main#auth .container > div .form-container .form-content .form .checkbox-option input::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--white);
+  left: 0;
+  transition: 0.4s ease-in-out;
+  scale: 0.8;
+}
+main#auth .container > div .form-container .form-content .form .checkbox-option input:checked {
+  background: var(--white-1);
+}
+main#auth .container > div .form-container .form-content .form .checkbox-option input:checked::before {
+  width: 100%;
+}
+main#auth .container > div .form-container .form-content .form .checkbox-option input:checked::after {
+  left: 20px;
+}
+main#auth .container > div .form-container .form-content .form .checkbox-option input:hover, main#auth .container > div .form-container .form-content .form .checkbox-option input:target, main#auth .container > div .form-container .form-content .form .checkbox-option input:focus {
+  background: var(--grey-4);
+}
+main#auth .container > div .form-container .form-content .form .checkbox-option label {
+  font-family: "Poppins-Light";
+  letter-spacing: -0.5px;
+  font-size: 0.9rem;
+}
+main#auth .container > div .form-container .form-content .form .checkbox-option label a {
+  cursor: help;
+  font-family: "SourceSansPro-Light";
+  color: var(--primary-color);
+  -webkit-text-decoration: underline transparent;
+          text-decoration: underline transparent;
+  transition: all 250ms;
+}
+main#auth .container > div .form-container .form-content .form .checkbox-option label a:hover {
+  -webkit-text-decoration-color: initial;
+          text-decoration-color: initial;
+}
+main#auth .container > div .form-container .form-content .form .submit {
+  margin-top: 1em;
+  border: 3px solid var(--primary-color);
+  width: 50%;
+  height: 36px;
+  border-radius: 18px;
+  font-family: "Poppins-SemiBold";
+  color: var(--white);
+  background: var(--primary-color);
+  transition: all 0.3s;
+}
+main#auth .container > div .form-container .form-content .form .submit:hover {
+  color: var(--primary-color);
+  background: var(--white);
+}
+main#auth .container > div .alternative {
+  z-index: 2;
+  color: var(--white-1);
+  font-family: "Poppins-Light";
+  opacity: 1;
+  transition: all 0.35s ease;
+}
+main#auth .container > div .alternative button {
+  border: none;
+  text-align: center;
+  background: var(--white-1);
+  padding: 0 15px;
+  height: 34px;
+  border-radius: 17px;
+  font-family: "Poppins-Regular";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 1em 0;
+  color: var(--primary-color);
+}
+main#auth .container > div .alternative p {
+  margin-top: 8px;
+}
+main#auth .container > div .alternative p a {
+  color: inherit;
+}
+main#auth .container > div .alternative button, main#auth .container > div .alternative a {
+  transition: all 250ms;
+  opacity: 1;
+}
+main#auth .container > div .alternative button:hover, main#auth .container > div .alternative button:target, main#auth .container > div .alternative button:focus, main#auth .container > div .alternative a:hover, main#auth .container > div .alternative a:target, main#auth .container > div .alternative a:focus {
+  opacity: 0.8;
+}
+main#auth .container > div.login {
+  z-index: initial;
+}
+main#auth .container > div.login .form-container .form-content {
+  box-shadow: -5px 5px 10px 2px #d7d7d7, -2px 2px 10px rgba(168, 168, 168, 0.2666666667);
+  transform: none;
+  opacity: 1;
+}
+main#auth .container > div.login .alternative {
+  opacity: 1;
+}
+main#auth .container > div.register {
+  position: absolute;
+  z-index: -1;
+}
+main#auth .container > div.register .form-container .form-content {
+  transform: translateX(100px);
+  opacity: 0;
+}
+main#auth .container > div.register .alternative {
+  opacity: 0;
+}
+main#auth .container.register .login {
+  z-index: -1;
+}
+main#auth .container.register .login .form-container .form-content {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+main#auth .container.register .login .alternative {
+  opacity: 0;
+}
+main#auth .container.register .register {
+  z-index: initial;
+}
+main#auth .container.register .register .form-container .form-content {
+  box-shadow: 5px 5px 10px 2px #d7d7d7, 2px 2px 10px rgba(168, 168, 168, 0.2666666667);
+  transform: none;
+  opacity: 1;
+}
+main#auth .container.register .register .alternative {
+  opacity: 1;
+}
+main#auth .container.register ~ .animation-rect {
+  transform: translateX(-50%);
+}
+main#auth .container.register ~ .animation-rect::before {
+  left: 100%;
+  transform: rotate(0.5turn);
+}
+main#auth .animation-rect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  opacity: 97.5%;
+  top: 0;
+  transform: translateX(50%);
+  transition: all 0.7s ease;
+  z-index: 1;
+}
+main#auth .animation-rect::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  left: -20px;
+  filter: blur(1px);
+  background: linear-gradient(90deg, transparent 0%, rgba(68, 68, 68, 0.2) 100%);
+}
+main#auth .form-container {
+  background: var(--white);
+  padding: 1.5em;
+  border-radius: 1em;
+  transition: all 0.7s ease;
+  box-shadow: 0 5px 10px 2px #d7d7d7, 0 2px 10px rgba(168, 168, 168, 0.2666666667);
+}
+main#auth .form-container > h2 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-family: "Poppins-SemiBold";
+  margin-bottom: 12px;
+}
+main#auth .form-container .form-content {
+  gap: 4px;
+}
+main#auth .form-container .form-content .input-box {
+  width: 300px;
+}
+main#auth .form-container .form-content .g-recaptcha {
+  margin: 10px 0;
+}
+main#auth .form-container .form-content .submit-btn {
+  margin-top: 12px;
+  border: 3px solid var(--primary-color);
+  width: 50%;
+  height: 36px;
+  border-radius: 18px;
+  font-family: "Poppins-SemiBold";
+  color: var(--white);
+  background: var(--primary-color);
+  transition: all 0.3s;
+}
+main#auth .form-container .form-content .submit-btn:hover {
+  color: var(--primary-color);
+  background: var(--white);
 }/*# sourceMappingURL=auth.css.map */

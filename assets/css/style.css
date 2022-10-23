@@ -699,4 +699,140 @@ body.loaded .loader-container .page-loader {
   to {
     transform: rotate(360deg);
   }
+}
+/* Inputs */
+.input-box {
+  width: 250px;
+  height: 44px;
+  background: var(--white);
+  border: 2px solid var(--grey-3);
+  border-radius: 5px;
+  position: relative;
+  margin: 10px 0;
+  transition: all 0.4s;
+}
+.input-box input {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1rem;
+  font-family: "SourceSansPro-Regular";
+  width: calc(100% - 20px);
+  height: 100%;
+  padding: 0 10px;
+  transform: translateY(-3px);
+  color: var(--black-3);
+}
+.input-box input::-moz-placeholder {
+  color: transparent;
+  font-family: "SourceSansPro-Light";
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  -moz-user-select: none;
+       user-select: none;
+}
+.input-box input:-ms-input-placeholder {
+  color: transparent;
+  font-family: "SourceSansPro-Light";
+  -ms-transition: all 0.4s;
+  transition: all 0.4s;
+  -ms-user-select: none;
+      user-select: none;
+}
+.input-box input::placeholder {
+  color: transparent;
+  font-family: "SourceSansPro-Light";
+  transition: all 0.4s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.input-box input[type=date]::-webkit-calendar-picker-indicator {
+  transform: translateY(3px);
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.input-box .password-visibility {
+  position: absolute;
+  right: 10px;
+  border: none;
+  outline: none;
+  background: none;
+  transition: all 0.2s;
+  opacity: 0;
+  cursor: pointer;
+  height: 20px;
+}
+.input-box .password-visibility img {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.input-box label {
+  pointer-events: none;
+  position: absolute;
+  left: 5px;
+  padding: 2px 3px;
+  transition: all 0.4s ease;
+  color: var(--grey-7);
+  background: var(--white);
+  font-family: "SourceSansPro-Regular";
+  animation: input-animate 0.4s ease reverse;
+  top: 8px;
+  font-size: 1rem;
+}
+.input-box:hover {
+  border: 2px solid var(--black-3);
+}
+.input-box.focused, .input-box.complete {
+  border: 2px solid #4d7386;
+}
+.input-box.focused input::-moz-placeholder, .input-box.complete input::-moz-placeholder {
+  color: var(--grey-3);
+}
+.input-box.focused input:-ms-input-placeholder, .input-box.complete input:-ms-input-placeholder {
+  color: var(--grey-3);
+}
+.input-box.focused input::placeholder, .input-box.complete input::placeholder {
+  color: var(--grey-3);
+}
+.input-box.focused input::-webkit-calendar-picker-indicator, .input-box.complete input::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  filter: invert(39%) sepia(8%) saturate(2096%) hue-rotate(156deg) brightness(88%) contrast(83%);
+}
+.input-box.focused label, .input-box.complete label {
+  -webkit-animation: input-animate 0.4s ease;
+          animation: input-animate 0.4s ease;
+  color: #4d7386;
+  top: -12px;
+  font-size: 0.9rem;
+}
+.input-box.focused .password-visibility, .input-box.complete .password-visibility {
+  opacity: 45%;
+  pointer-events: initial;
+}
+.input-box.focused .password-visibility:hover, .input-box.focused .password-visibility:focus, .input-box.focused .password-visibility:target, .input-box.complete .password-visibility:hover, .input-box.complete .password-visibility:focus, .input-box.complete .password-visibility:target {
+  opacity: 0.8;
+}
+@-webkit-keyframes input-animate {
+  from {
+    top: 8px;
+    font-size: 1rem;
+  }
+  to {
+    top: -12px;
+    font-size: 0.9rem;
+  }
+}
+@keyframes input-animate {
+  from {
+    top: 8px;
+    font-size: 1rem;
+  }
+  to {
+    top: -12px;
+    font-size: 0.9rem;
+  }
 }/*# sourceMappingURL=style.css.map */
