@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 
-    <title>Authentification</title>
+    <title>Profil</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,14 +12,13 @@
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/sheet.css">
-    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="stylesheet" href="../assets/css/profile.css">
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="../assets/js/app.js"></script>
     <script src="../assets/js/auth.js"></script>
 
 </head>
-<body class="d-flex row loaded">
+<body class="d-flex row">
 
     <div class="menu">
         <div class="container d-flex column space-between">
@@ -118,33 +117,73 @@
             </div>
         </header>
 
-        <main role="main" class="col-center" id="auth">
-            <div class="form-container col-center">
-                <h2>Inscription</h2>
+        <main role="main" id="profile" class="d-flex column align-center">
+            <section class="top">
+                <div class="banner">
+                    <img src="../assets/images/test/kill-la-kill-banner.jpeg" alt="Banner">
+                    <img src="../assets/images/test/kill-la-kill-banner.jpeg" alt="Banner">
+                </div>
 
-                <form class="form-content d-flex column align-center" method="post">
-                    <div class="input-box col-center">
-                        <input type="password" name="password" id="password" placeholder="Mot de passe" autocomplete="new-password" required>
-                        <label for="password">Mot de passe</label>
+                <button class="new-banner col-center">
+                    <input type="file" name="background" id="background" accept="image/*" hidden>
+                    <label for="background">
+                        <img src="../assets/images/upload.png" alt="Upload" class="icon">
+                    </label>
+                </button>
+
+                <div class="avatar d-flex column-reverse align-center">
+                    <div class="picture">
+                        <input type="file" name="avatar" id="avatar" accept="image/*" hidden>
+
+                        <img src="../assets/images/test/ayanokoji.jpg" alt="Avatar">
+
+                        <label for="avatar" class="pic-icon col-center">
+                            <img src="../assets/images/upload.png" alt="Upload">
+                        </label>
                     </div>
 
-                    <div class="input-box col-center">
-                        <input type="password" name="password" id="password" placeholder="Mot de passe" autocomplete="new-password" required>
-                        <label for="password">Confirmation mot de pase</label>
-                    </div>
+                    <p>TheRedMine</p>
+                </div>
+            </section>
 
-                    <div class="g-recaptcha" data-sitekey="6LcgdqUiAAAAAOzKxZIlcucbg3VhjtBHiturB-H2"></div>
-
-                    <button type="submit" class="submit col-center">
-                        <span>Se connecter</span>
-
-                        <div class="loading-animation col-center">
-                            <img src="../assets/images/loading-part.svg" alt="Loading">
-                            <img src="../assets/images/loading-part.svg" alt="Loading">
+            <section class="infos d-flex row wrap space-between">
+                <form class="credentials d-flex column">
+                    <h2 class="title">Identifiants</h2>
+    
+                    <div class="input d-flex row space-between align-center saved">
+                        <div class="input-box col-center complete">
+                            <input type="text" name="username" id="username" placeholder="Nom d'utilisateur" autocomplete="username" value="TheRedMine" required>
+                            <label for="username">Nom d'utilisateur</label>
                         </div>
-                    </button>
+
+                        <button type="button">Enregistrer</button>
+                    </div>
+
+                    <div class="input d-flex row space-between align-center">
+                        <div class="input-box col-center complete">
+                            <input type="email" name="email" id="email" placeholder="Adresse mail" autocomplete="email" value="theredminedu51@gmail.com" required>
+                            <label for="email">Adresse mail</label>
+                        </div>
+
+                        <button type="button">Enregistrer</button>
+                    </div>
+
+                    <div class="input d-flex row space-between align-center">
+                        <div class="input-box col-center complete">
+                            <input type="password" name="password" id="password" autocomplete="new-password" value="**********" disabled>
+                            <label for="password">Mot de passe</label>
+                        </div>
+
+                        <button type="button">Modifier</button>
+                    </div>
                 </form>
-            </div>
+
+                <div class="preferences">
+                    <h2 class="title">Préférences</h2>
+
+                    <div class="content">En développement</div>
+                </div>
+            </section>
         </main>
 
         <footer class="d-flex column">

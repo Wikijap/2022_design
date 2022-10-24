@@ -1,0 +1,194 @@
+main#profile {
+  position: relative;
+  min-height: 500px;
+  height: auto;
+}
+main#profile > section {
+  position: relative;
+  width: calc(100% - 4em);
+}
+main#profile .top {
+  margin-bottom: 100px;
+}
+main#profile .top .banner {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  width: 100%;
+}
+main#profile .top .banner img {
+  width: 100%;
+  height: 100%;
+}
+main#profile .top .banner img:first-child {
+  position: absolute;
+  filter: opacity(0.3) blur(3px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+main#profile .top .banner img:last-child {
+  position: relative;
+  z-index: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: scale(105%);
+  filter: grayscale(1%) brightness(95%) opacity(98%);
+}
+main#profile .top .banner::before, main#profile .top .banner::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+main#profile .top .banner::before {
+  background: linear-gradient(0, rgba(0, 0, 0, 0.7333333333) 0, rgba(68, 68, 68, 0.3333333333) 50%, rgba(153, 153, 153, 0.2) 100%);
+  z-index: 2;
+}
+main#profile .top .banner::after {
+  background: linear-gradient(90deg, rgba(221, 221, 221, 0.3333333333) 0, transparent 50%, rgba(221, 221, 221, 0.3333333333) 100%);
+  z-index: 3;
+}
+main#profile .top .new-banner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  z-index: 4;
+  background: none;
+  border: none;
+  opacity: 1;
+  transition: all 0.2s;
+}
+main#profile .top .new-banner img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: scale(55%);
+  filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
+}
+main#profile .top .new-banner:hover, main#profile .top .new-banner:focus, main#profile .top .new-banner:target {
+  opacity: 0.6;
+}
+main#profile .top .avatar {
+  position: absolute;
+  top: 170px;
+  width: 100%;
+  z-index: 3;
+  left: 0;
+}
+main#profile .top .avatar .picture {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: medium solid var(--white);
+  background: var(--white-1);
+  cursor: pointer;
+}
+main#profile .top .avatar .picture input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  visibility: hidden;
+}
+main#profile .top .avatar .picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: scale(101%);
+}
+main#profile .top .avatar .picture .pic-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 34, 34, 0.5333333333);
+  opacity: 0;
+  transition: all 250ms;
+  cursor: pointer;
+}
+main#profile .top .avatar .picture .pic-icon img {
+  width: 50%;
+  height: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
+  transform: scale(65%);
+}
+main#profile .top .avatar .picture:hover .pic-icon, main#profile .top .avatar .picture input:target .pic-icon, main#profile .top .avatar .picture input:focus .pic-icon {
+  opacity: 1;
+}
+main#profile .top .avatar p {
+  font-family: "Poppins-SemiBold";
+  transform: translateY(-60px);
+  color: var(--white);
+  font-size: 2.5rem;
+  text-shadow: 0 -3px 1em rgba(0, 0, 0, 0.4666666667), 0 3px 1em rgba(0, 0, 0, 0.4666666667), 3px 0 1em rgba(0, 0, 0, 0.4666666667), -3px 0 1em rgba(0, 0, 0, 0.4666666667);
+}
+main#profile .infos {
+  position: relative;
+  margin-bottom: 2em;
+}
+main#profile .infos .credentials, main#profile .infos .preferences {
+  background: var(--white);
+  width: calc(50% - 3.5em);
+  padding: 1em;
+  border-radius: 1em;
+  border: 1px solid var(--white-2);
+  gap: 3px;
+}
+main#profile .infos .credentials h2.title, main#profile .infos .preferences h2.title {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-family: "Poppins-SemiBold";
+  margin: 3px 0 0.5em;
+}
+main#profile .infos .credentials h2.title::first-letter, main#profile .infos .preferences h2.title::first-letter {
+  font-size: 1.6rem;
+}
+main#profile .infos .credentials {
+  box-shadow: -5px 5px 10px 2px #d7d7d7, -2px 2px 10px rgba(168, 168, 168, 0.2666666667);
+}
+main#profile .infos .credentials .input button {
+  height: 36px;
+  margin-right: 10px;
+  width: 120px;
+  border-radius: 18px;
+  border: none;
+  background: var(--primary-color);
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-family: "Poppins-Light";
+  letter-spacing: 1pt;
+  opacity: 1;
+  transition: all 0.2s;
+  pointer-events: initial;
+}
+main#profile .infos .credentials .input button:hover, main#profile .infos .credentials .input button:target, main#profile .infos .credentials .input button:focus {
+  opacity: 0.8;
+}
+main#profile .infos .credentials .input .input-box input[type=password] {
+  pointer-events: none;
+}
+main#profile .infos .credentials .input.saved button {
+  opacity: 0;
+  pointer-events: none;
+}
+main#profile .infos .preferences {
+  box-shadow: 5px 5px 10px 2px #d7d7d7, 2px 2px 10px rgba(168, 168, 168, 0.2666666667);
+}
+main#profile .infos .preferences .content {
+  margin-top: 5em;
+  font-family: "Poppins-Light";
+}/*# sourceMappingURL=profile.css.map */
