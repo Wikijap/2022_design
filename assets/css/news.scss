@@ -1,0 +1,125 @@
+main#news {
+    min-height: 600px;
+    height: auto !important;
+
+    h1 {
+        position: relative;
+        text-align: center;
+        padding: 1em;
+        font-family: "SourceSansPro-SemiBold";
+        font-size: 2.2rem;
+        color: var(--primary-color);
+
+        &::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--grey-7);
+            position: absolute;
+            bottom: 28px;
+            left: calc(50% - 40px);
+            border-radius: 2px;
+        }
+    }
+
+    .container {
+        section {
+            width: calc(50% - 5em);
+            border-radius: 1em;
+            min-width: 250px;
+
+            .head {
+                width: calc(100% - 32px);
+                background: var(--white);
+                height: 40px;
+                padding: 0 15px;
+                border-radius: 1em 1em 0 0;
+                border: 1px solid var(--white-2);
+
+                h2 {
+                    text-align: left;
+                    font-family: "Poppins-Regular";
+                    font-size: 1.2rem;
+                    color: var(--primary-color);
+                }
+            }
+
+            .content {
+                width: calc(100% - 2px);
+                border: 1px solid var(--grey-3);
+                border-top: none;
+                border-radius: 0 0 1em 1em;
+                min-height: 100px;
+
+                .card {
+                    padding: 5px;
+                    height: 70px;
+                    background: var(--white-1);
+                    border: none;
+                    border-bottom: 1px solid var(--white-3);
+                    gap: 5px;
+                    cursor: pointer;
+                    transition: all 350ms;
+                    transform: none;
+
+                    > div {
+                        height: 100%;
+                        pointer-events: none;
+                    }
+
+                    .text {
+                        h3.sub-title {
+                            font-family: "SourceSansPro-SemiBold";
+                            color: var(--primary-color);
+                            font-size: 1.1rem;
+                            transition: all 350ms;
+                            text-decoration: underline transparent;
+                        }
+
+                        .description {
+                            font-family: "SourceSansPro-Regular";
+                            font-size: .9rem;
+                            color: var(--black-1);
+                        }
+                    }
+
+                    &:last-child {
+                        border-bottom: none;
+                        border-radius: 0 0 1em 1em;
+
+                        &:hover { border-radius: 0 }
+                    }
+
+                    &:hover {
+                        transform: scale(102%);
+                        background: #f7f7f7;
+
+                        .text .sub-title { text-decoration-color: var(--primary-color) }
+                    }
+                }
+            }
+
+            &.new-posts .content .card .img {
+                width: 75px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            &.updates .content .card .name {
+                width: 90px;
+                font-size: 1.1rem;
+                font-family: "SourceSansPro-SemiBold";
+                color: var(--primary-color);
+            }
+        }
+
+        @media screen and  (max-width: 600px) {
+            gap: 10px;
+        }
+    }
+}

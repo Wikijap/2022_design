@@ -1,0 +1,112 @@
+main#news {
+  min-height: 600px;
+  height: auto !important;
+}
+main#news h1 {
+  position: relative;
+  text-align: center;
+  padding: 1em;
+  font-family: "SourceSansPro-SemiBold";
+  font-size: 2.2rem;
+  color: var(--primary-color);
+}
+main#news h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--grey-7);
+  position: absolute;
+  bottom: 28px;
+  left: calc(50% - 40px);
+  border-radius: 2px;
+}
+main#news .container section {
+  width: calc(50% - 5em);
+  border-radius: 1em;
+  min-width: 250px;
+}
+main#news .container section .head {
+  width: calc(100% - 32px);
+  background: var(--white);
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 1em 1em 0 0;
+  border: 1px solid var(--white-2);
+}
+main#news .container section .head h2 {
+  text-align: left;
+  font-family: "Poppins-Regular";
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+main#news .container section .content {
+  width: calc(100% - 2px);
+  border: 1px solid var(--grey-3);
+  border-top: none;
+  border-radius: 0 0 1em 1em;
+  min-height: 100px;
+}
+main#news .container section .content .card {
+  padding: 5px;
+  height: 70px;
+  background: var(--white-1);
+  border: none;
+  border-bottom: 1px solid var(--white-3);
+  gap: 5px;
+  cursor: pointer;
+  transition: all 350ms;
+  transform: none;
+}
+main#news .container section .content .card > div {
+  height: 100%;
+  pointer-events: none;
+}
+main#news .container section .content .card .text h3.sub-title {
+  font-family: "SourceSansPro-SemiBold";
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  transition: all 350ms;
+  -webkit-text-decoration: underline transparent;
+          text-decoration: underline transparent;
+}
+main#news .container section .content .card .text .description {
+  font-family: "SourceSansPro-Regular";
+  font-size: 0.9rem;
+  color: var(--black-1);
+}
+main#news .container section .content .card:last-child {
+  border-bottom: none;
+  border-radius: 0 0 1em 1em;
+}
+main#news .container section .content .card:last-child:hover {
+  border-radius: 0;
+}
+main#news .container section .content .card:hover {
+  transform: scale(102%);
+  background: #f7f7f7;
+}
+main#news .container section .content .card:hover .text .sub-title {
+  -webkit-text-decoration-color: var(--primary-color);
+          text-decoration-color: var(--primary-color);
+}
+main#news .container section.new-posts .content .card .img {
+  width: 75px;
+  overflow: hidden;
+}
+main#news .container section.new-posts .content .card .img img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main#news .container section.updates .content .card .name {
+  width: 90px;
+  font-size: 1.1rem;
+  font-family: "SourceSansPro-SemiBold";
+  color: var(--primary-color);
+}
+@media screen and (max-width: 600px) {
+  main#news .container {
+    gap: 10px;
+  }
+}/*# sourceMappingURL=news.css.map */
