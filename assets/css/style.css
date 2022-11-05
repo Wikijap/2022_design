@@ -135,6 +135,7 @@ body {
   background-color: var(--white);
   /* Menu */
   /* Main content */
+  /* Cookie pop-up */
   /* page laoder */
 }
 body .menu {
@@ -631,6 +632,74 @@ body .page-content footer > div.copyright {
     display: none !important;
   }
 }
+body .cookies-popup {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background: rgba(51, 51, 51, 0.6);
+  opacity: 1;
+  transition: 0.5s;
+  pointer-events: initial;
+}
+body .cookies-popup .container {
+  background: var(--white);
+  max-width: 400px;
+  width: 25%;
+  min-width: 250px;
+  min-height: 200px;
+  height: auto;
+  border-radius: 1em;
+  text-align: center;
+  padding: 1em;
+  box-shadow: 0 0 1em 6px rgba(58, 58, 58, 0.1411764706);
+}
+body .cookies-popup .container h2.title {
+  font-family: "Poppins-SemiBold";
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+body .cookies-popup .container .content {
+  width: 100%;
+  font-family: "SourceSansPro-Regular";
+  font-size: 0.9rem;
+  color: var(--black-1);
+  text-align: left;
+  margin: 10px 0;
+}
+body .cookies-popup .container .content a {
+  color: var(--primary-color);
+  -webkit-text-decoration: underline var(--primary-color);
+          text-decoration: underline var(--primary-color);
+  transition: all 250ms;
+}
+body .cookies-popup .container .content a:hover, body .cookies-popup .container .content a:focus, body .cookies-popup .container .content a:target {
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
+}
+body .cookies-popup .container .btn-cookies {
+  justify-content: flex-end;
+  width: 100%;
+}
+body .cookies-popup .container .btn-cookies button {
+  width: 110px;
+  height: 32px;
+  border-radius: 16px;
+  color: var(--white);
+  border: 2px solid transparent;
+  transition: all 0.3s;
+  background: var(--primary-color);
+  font-family: "Poppins-Regular";
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+body .cookies-popup .container .btn-cookies button:hover, body .cookies-popup .container .btn-cookies button:target, body .cookies-popup .container .btn-cookies button:focus {
+  border-color: var(--primary-color);
+  background: transparent;
+  color: var(--primary-color);
+}
 body .loader-container {
   --loader-size: max(150vh, 150vw);
   position: fixed;
@@ -669,6 +738,10 @@ body .loader-container .page-loader img:nth-child(2) {
   top: -2em;
   -webkit-animation: turn-animation 0.8s cubic-bezier(0.445, 0.1, 0.55, 0.9) 100ms infinite;
           animation: turn-animation 0.8s cubic-bezier(0.445, 0.1, 0.55, 0.9) 100ms infinite;
+}
+body.accept-cookies .cookies-popup {
+  opacity: 0;
+  pointer-events: none;
 }
 body.loaded .loader-container {
   z-index: -1;
