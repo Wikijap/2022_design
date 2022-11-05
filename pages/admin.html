@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <title>Administration</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../assets/images/icon/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/sheet.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+
+    <script src="../assets/js/app.js"></script>
+
+</head>
+<body class="d-flex row">
+
+    <div class="menu">
+        <div class="container d-flex column space-between">
+            <div class="top d-flex column align-center">
+                <div class="logo">
+                    <img src="../assets/images/logo.png" alt="Wikijap">
+                </div>
+
+                <h1>Wikijap</h1>
+
+                <nav>
+                    <li>
+                        <a href="/pages/home.html" class="d-flex row space-between align-center">
+                            Accueil <img src="../assets/images/home.png" alt="Accueil">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/mangas.html" class="d-flex row space-between align-center">
+                            Mangas <img src="../assets/images/book.png" alt="Mangas">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/animes.html" class="d-flex row space-between align-center">
+                            Animés <img src="../assets/images/video.png" alt="Animés">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/pages/animes.html" class="d-flex row space-between align-center active">
+                            Administration <img src="../assets/images/computer.png" alt="Animés">
+                        </a>
+                    </li>
+                </nav>
+            </div>
+
+            <ul class="auth-actions">
+                <li><a href="/pages/auth.html">S'inscrire</a></li>
+                <li><a href="/pages/auth.html">Se connecter</a></li>
+            </ul>
+
+            <!-- <div class="carret d-flex justify-center align-center">
+                <span><img src="../assets/images/carret.svg" alt="Display menu"></span>
+            </div> -->
+        </div>
+
+        <div class="fix"></div>
+    </div>
+
+    <div class="page-content">
+        <header class="d-flex align-center">
+            <h1 class="title">Wikijap</h1>
+
+            <div class="search d-flex column">
+                <div class="search-box d-flex row space-between align-center">
+                    <input type="text" name="search" id="hdr-search" placeholder="Rechercher...">
+
+                    <label class="icon" for="hdr-search">
+                        <button type="button">
+                            <img src="../assets/images/search.svg" alt="Search">
+                        </button>
+                    </label>
+                </div>
+
+                <div class="result">
+                    <div class="clearfix"></div>
+
+                    <div class="result-box">
+                        <a class="card-element d-flex align-center" href="#">
+                            <div class="card-image">
+                                <img src="../assets/images/test/naruto.jpg" alt="Image">
+                            </div>
+                            
+                            <div class="card-text">
+                                <b>Naruto</b> | <i>Manga</i>
+                                <p>Lorem ipsum, dolor sit amet consectetur</p>
+                            </div>
+                        </a>
+
+                        <a class="card-element d-flex align-center" href="#">
+                            <div class="card-image">
+                                <img src="../assets/images/test/naruto.jpg" alt="Image">
+                            </div>
+                            
+                            <div class="card-text">
+                                <b>Naruto</b> | <i>Manga</i>
+                                <p>Lorem ipsum, dolor sit amet consectetur</p>
+                            </div>
+                        </a>
+
+                        <a class="card-element d-flex align-center" href="#">
+                            <div class="card-image">
+                                <img src="../assets/images/test/naruto.jpg" alt="Image">
+                            </div>
+                            
+                            <div class="card-text">
+                                <b>Naruto</b> | <i>Manga</i>
+                                <p>Lorem ipsum, dolor sit amet consectetur</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main role="main" id="admin">
+            <div class="forms d-flex wrap">
+                <div class="form-container new-article">
+                    <h2>Nouvel article</h2>
+
+                    <form class="form-content">
+                        <div class="checkbox-option d-flex row">
+                            <span>Type :</span>
+                            <p><input type="radio" name="_type" id="a" checked><label for="a">Animé</label></p>
+                            <p><input type="radio" name="_type" id="b"><label for="b">Film</label></p>
+                            <p><input type="radio" name="_type" id="c"><label for="c">Manga</label></p>
+                        </div>
+
+                        <table>
+                            <tr>
+                                <td>Titre</td>
+                                <td><input type="text" placeholder="Ex: Naruto"></td>
+                            </tr>
+                            <tr>
+                                <td>Titre original</td>
+                                <td><input type="text" placeholder="Ex: ナルト"></td>
+                            </tr>
+                            <tr>
+                                <td>Auteur</td>
+                                <td><input type="text" placeholder="Ex: Masashi Kishimoto"></td>
+                            </tr>
+                            <tr>
+                                <td>Type</td>
+                                <td><input type="text" placeholder="Ex: Shōnen"></td>
+                            </tr>
+                            <tr>
+                                <td>Thèmes</td>
+                                <td><input type="text" placeholder="Ex: Quotidien,École"></td>
+                            </tr>
+                            <tr>
+                                <td>Genres associés</td>
+                                <td><input type="text" placeholder="Ex: Action,Aventure,Drame,Nekketsu"></td>
+                            </tr>
+                            <tr>
+                                <td>Année de lancement</td>
+                                <td><input type="number" min="1900" max="javascript:new Date().getFullYear()" pattern="[0-9]{4}" placeholder="Ex: 1999" required></td>
+                            </tr>
+                            <tr>
+                                <td>Volumes</td>
+                                <td><input type="number" placeholder="72"></td>
+                            </tr>
+                            <tr>
+                                <td>Prix moyen</td>
+                                <td><input type="number" placeholder="Ex: 6.85 (en €)"></td>
+                            </tr>
+                            <tr>
+                                <td>Âge minimal recommandé</td>
+                                <td><input type="number" placeholder="Ex: 10 (ans)"></td>
+                            </tr>
+                            <tr>
+                                <td>Éditeur</td>
+                                <td><input type="text" placeholder="Ex: Kana"></td>
+                            </tr>
+                            <tr>
+                                <td>Groupe</td>
+                                <td><input type="text" placeholder="Ex: Naruto"></td>
+                            </tr>
+                        </table>
+
+                        <div class="descriptions d-flex column align-center">
+                            <textarea placeholder="Description" maxlength="300"></textarea>
+                            <textarea placeholder="Description étendue" maxlength="2000"></textarea>
+                        </div>
+
+                        <div class="submit-btn col-center">
+                            <button type="submit" class="col-center">
+                                Créer
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- <div class="form-container">
+                    <h2>Nouvel article</h2>
+
+                    <form class="form-content"></form>
+                </div> -->
+            </div>
+        </main>
+
+        <footer class="d-flex column">
+            <div class="container d-flex wrap space-evenly align-center">
+                <section class="d-flex column">
+                    <h3 class="title">A propos</h3>
+
+                    <ul class="content">
+                        <li><a href="/">Conditions Générales d'Utilisation</a></li>
+                        <li><a href="/">Faire un don</a></li>
+                        <li><a href="/">Données personnelles</a></li>
+                    </ul>
+                </section>
+
+                <div class="border d-block"></div>
+
+                <section class="d-flex column">
+                    <h3 class="title">Nous contacter</h3>
+
+                    <ul class="content">
+                        <li><a href="/">Signaler une anomalie</a></li>
+                        <li><a href="/">Serveur Discord</a></li>
+                        <li><a href="/">Lien Instagram</a></li>
+                    </ul>
+                </section>
+
+                <div class="border d-block"></div>
+
+                <section class="d-flex column">
+                    <h3 class="title">Liens rapides</h3>
+
+                    <ul class="content">
+                        <li><a href="/">Remerciements</a></li>
+                        <li><a href="/">Cod'ons</a></li>
+                        <li><a href="/">Cryptest</a></li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="copyright">
+                Wikijap &copy;&ensp;—&ensp;Copyright 2019 - 2024&ensp;—&ensp;Tous droits réservés
+            </div>
+        </footer>
+    </div>
+
+    <div class="loader-container d-flex column align-center justify-center">
+        <div class="page-loader d-flex column align-center justify-center">
+            <img src="../assets/images/loading-part.svg" alt="Loading">
+            <img src="../assets/images/loading-part.svg" alt="Loading">
+        </div>
+    </div>
+
+</body>
+</html>

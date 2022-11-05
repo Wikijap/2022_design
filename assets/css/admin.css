@@ -1,0 +1,141 @@
+main#admin {
+  height: auto !important;
+}
+main#admin .forms .form-container {
+  width: calc(50% - 4em);
+  padding: 0 2em;
+  margin-bottom: 1em;
+}
+main#admin .forms .form-container h2 {
+  color: var(--primary-color);
+  font-family: "Poppins-SemiBold";
+  font-size: 2rem;
+  padding: 1em;
+}
+main#admin .forms .form-container .form-content {
+  background: var(--white);
+  border-radius: 1em;
+  border: 1px solid #ddd;
+  box-shadow: -5px 5px 10px 2px #d7d7d7, -2px 2px 10px rgba(168, 168, 168, 0.2666666667);
+  width: 100%;
+}
+main#admin .forms .form-container.new-article .form-content {
+  padding: 0 1em;
+}
+main#admin .forms .form-container.new-article .form-content .checkbox-option {
+  align-items: flex-end;
+  padding: 1em;
+  gap: 5px;
+}
+main#admin .forms .form-container.new-article .form-content .checkbox-option > span {
+  font-family: "Poppins-Regular";
+}
+main#admin .forms .form-container.new-article .form-content .checkbox-option p {
+  margin: 0 2px;
+}
+main#admin .forms .form-container.new-article .form-content .checkbox-option p input {
+  cursor: pointer;
+  position: relative;
+  top: 2px;
+}
+main#admin .forms .form-container.new-article .form-content .checkbox-option p label {
+  cursor: pointer;
+  font-family: "SourceSansPro-Regular";
+  font-size: 0.9rem;
+}
+main#admin .forms .form-container.new-article .form-content table {
+  width: calc(100% - 1.6em);
+  padding: 1em 0.8em;
+  white-space: 0;
+}
+main#admin .forms .form-container.new-article .form-content table tr {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.6em;
+  padding-bottom: 0.6em;
+  border-bottom: 1px solid #d9d9d9;
+}
+main#admin .forms .form-container.new-article .form-content table tr td:first-child {
+  font-size: 1rem;
+  font-family: "Poppins-Regular";
+  color: var(--primary-color);
+  min-width: 230px;
+}
+main#admin .forms .form-container.new-article .form-content table tr td:first-child::after {
+  content: " : ";
+}
+main#admin .forms .form-container.new-article .form-content table tr td:last-child {
+  min-width: 350px;
+}
+main#admin .forms .form-container.new-article .form-content table tr td:last-child input {
+  width: calc(100% - 24px);
+  padding: 6px 12px;
+  height: 24px;
+  font-family: "Poppins-Regular";
+  font-size: 0.9rem;
+  color: var(--black-2);
+  border-radius: 19px;
+  transition: all 0.3s;
+  border: 2px solid var(--white-2);
+}
+main#admin .forms .form-container.new-article .form-content table tr td:last-child input::-moz-placeholder {
+  color: var(--grey-3);
+}
+main#admin .forms .form-container.new-article .form-content table tr td:last-child input:-ms-input-placeholder {
+  color: var(--grey-3);
+}
+main#admin .forms .form-container.new-article .form-content table tr td:last-child input::placeholder {
+  color: var(--grey-3);
+}
+main#admin .forms .form-container.new-article .form-content table tr td:last-child input:target, main#admin .forms .form-container.new-article .form-content table tr td:last-child input:focus, main#admin .forms .form-container.new-article .form-content table tr td:last-child input:hover, main#admin .forms .form-container.new-article .form-content table tr td:last-child input:not(:empty) {
+  border-color: var(--primary-color);
+}
+main#admin .forms .form-container.new-article .form-content table tr:last-child {
+  margin-bottom: -0.5em;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+main#admin .forms .form-container.new-article .form-content .descriptions {
+  width: 100%;
+  gap: 10px;
+}
+main#admin .forms .form-container.new-article .form-content .descriptions textarea {
+  width: calc(100% - 2em);
+  border: 2px solid var(--white-2);
+  outline: none;
+  background: transparent;
+  transition: border-color 0.3s;
+  border-radius: 10px;
+  padding: 6px 8px;
+  min-height: 86px;
+  max-height: 300px;
+  resize: vertical;
+  font-size: 1rem;
+  font-family: "SourceSansPro-Regular";
+}
+main#admin .forms .form-container.new-article .form-content .descriptions textarea:target, main#admin .forms .form-container.new-article .form-content .descriptions textarea:focus, main#admin .forms .form-container.new-article .form-content .descriptions textarea:hover, main#admin .forms .form-container.new-article .form-content .descriptions textarea:not(:empty) {
+  border-color: var(--primary-color);
+}
+main#admin .forms .form-container.new-article .form-content .submit-btn {
+  padding: 10px 0;
+}
+main#admin .forms .form-container.new-article .form-content .submit-btn button {
+  width: 120px;
+  height: 34px;
+  border-radius: 17px;
+  background: var(--primary-color);
+  color: var(--white);
+  font-family: "Poppins-SemiBold";
+  border: none;
+  letter-spacing: 1px;
+  font-size: 14px;
+  opacity: 1;
+  cursor: pointer;
+  transition: all 250ms;
+}
+main#admin .forms .form-container.new-article .form-content .submit-btn button:hover, main#admin .forms .form-container.new-article .form-content .submit-btn button:target, main#admin .forms .form-container.new-article .form-content .submit-btn button:focus {
+  opacity: 0.8;
+}/*# sourceMappingURL=admin.css.map */
